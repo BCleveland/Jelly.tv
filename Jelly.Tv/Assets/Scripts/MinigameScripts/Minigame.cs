@@ -19,7 +19,7 @@ public abstract class Minigame
 public class MinigameResult
 {
 	public string CoroutineToPlay;
-	public Dictionary<int, PlayerOutcome> UserResults = new Dictionary<int, PlayerOutcome>();
-	public Dictionary<int, int> UserEarnings = new Dictionary<int, int>();
+	public Dictionary<string, PlayerOutcome> UserResults = new Dictionary<string, PlayerOutcome>();
+	public Dictionary<string, int> UserEarnings = new Dictionary<string, int>();
 }
 public enum PlayerOutcome { Won, Lost, Tie }

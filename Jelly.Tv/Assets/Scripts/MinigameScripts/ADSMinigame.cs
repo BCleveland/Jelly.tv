@@ -31,8 +31,8 @@ public class ADSMinigame : Minigame
 			int amount = Mathf.FloorToInt(potAmount / 2.0f) + participationMoney;
 			foreach (Player p in players)
 			{
-				output.UserResults.Add(p.TwitchID, PlayerOutcome.Tie);
-				output.UserEarnings.Add(p.TwitchID, amount);
+				output.UserResults.Add(p.Id, PlayerOutcome.Tie);
+				output.UserEarnings.Add(p.Id, amount);
 			}
 		}
 		else if (result == "lose")
@@ -40,8 +40,8 @@ public class ADSMinigame : Minigame
 			//neither player earns anything other than participation
 			foreach(Player p in players)
 			{
-				output.UserResults.Add(p.TwitchID, PlayerOutcome.Lost);
-				output.UserEarnings.Add(p.TwitchID, participationMoney);
+				output.UserResults.Add(p.Id, PlayerOutcome.Lost);
+				output.UserEarnings.Add(p.Id, participationMoney);
 			}
 		}
 		else
@@ -54,10 +54,10 @@ public class ADSMinigame : Minigame
 				winnerAmount = Mathf.FloorToInt(winnerAmount * k_StealModifier);
 			winnerAmount += participationMoney;
 
-			output.UserResults.Add(winner.TwitchID, PlayerOutcome.Won);
-			output.UserEarnings.Add(winner.TwitchID, winnerAmount);
-			output.UserResults.Add(loser.TwitchID, PlayerOutcome.Lost);
-			output.UserEarnings.Add(loser.TwitchID, participationMoney);
+			output.UserResults.Add(winner.Id, PlayerOutcome.Won);
+			output.UserEarnings.Add(winner.Id, winnerAmount);
+			output.UserResults.Add(loser.Id, PlayerOutcome.Lost);
+			output.UserEarnings.Add(loser.Id, participationMoney);
 		}
 		return output;
 	}
