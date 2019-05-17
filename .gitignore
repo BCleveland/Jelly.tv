@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+Jelly\.Tv/Assets/Scripts/TwitchConnection/Keys\.cs
+
+Jelly\.Tv/Assets/Scripts/TwitchConnection/Keys\.cs\.meta
