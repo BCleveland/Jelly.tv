@@ -42,7 +42,6 @@ public class PlayerManager : Singleton<PlayerManager> {
     /// <param name="id">The Twitch Id of the player</param>
     /// <returns>Retrns true if the player has been registered and false if the player is already registered.</returns>
     public bool RegisterPlayer(string id) => m_playerDictionary.AddUnique(id, new Player(id));
-    0
 
 
     private void SetPlayerActive(string id) {
