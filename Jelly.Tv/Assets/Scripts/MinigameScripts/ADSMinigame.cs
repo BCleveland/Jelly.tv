@@ -7,6 +7,11 @@ public class ADSMinigame : Minigame
 	//static information
 	private static float k_StealModifier = 1.5f;
 
+	public override bool IsValidCommand(string command)
+	{
+		return Commands.ADSCommandDict.ContainsKey(command);
+	}
+
 	public override MinigameResult ProcessGameLogic(List<Player> players, int potAmount, int participationMoney)
 	{
 		//3x3 matrix of results. x is p1, y is p2 command
