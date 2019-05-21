@@ -9,7 +9,7 @@ using TwitchLib.Client.Events;
 public class TwitchClient : MonoBehaviour
 {
 	public Client client = null;
-	private string channel_name = "mightbeabitmagic";
+	[SerializeField] private string channel_name = "mightbeabitmagic";
 
 	protected List<TwitchCommand> m_commands = null;
 
@@ -37,11 +37,18 @@ public class TwitchClient : MonoBehaviour
 		//login command
 		//register command
 		//info command
+		m_commands.Add(new TwitchCommand("info", InfoCommand));
+
 	}
 
 	private void Screm(object sender, OnChatCommandReceivedArgs e)
 	{
 		client.SendMessage(client.JoinedChannels[0], "i screm");
+	}
+
+	private void InfoCommand(object sender, OnChatCommandReceivedArgs e)
+	{
+		client.SendMessage(client.JoinedChannels[0], "Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!");
 	}
 
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
@@ -51,12 +58,8 @@ public class TwitchClient : MonoBehaviour
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
-		string message = "Command Text: " + e.Command.CommandText;
-		foreach (var item in e.Command.ArgumentsAsList)
-		{
-			Debug.Log("Argument: " + item.ToString());
-		}
-		client.SendMessage(client.JoinedChannels[0], "I'm babey. " + message);
+		
+		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
 		foreach (var item in m_commands)
 		{
 			if (item.CommandName == e.Command.CommandText)
