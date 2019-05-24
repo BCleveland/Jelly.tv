@@ -21,7 +21,7 @@ public class MinigameManager : Singleton<MinigameManager>
 		m_LastMinigameId++;
 		m_CurrentMinigame = new ADSMinigame();
 	}
-	public void StartMinigame(List<Player> participants)
+	public void StartMinigame(List<PlayerManager.Player> participants)
 	{
 		//todo
 		//get the int of currentMinigame - player last minigame

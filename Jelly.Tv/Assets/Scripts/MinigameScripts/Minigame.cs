@@ -12,7 +12,7 @@ using UnityEngine;
 
 public abstract class Minigame
 {
-	public abstract MinigameResult ProcessGameLogic(List<Player> players, int potAmount, int participationMoney);
+	public abstract MinigameResult ProcessGameLogic(List<PlayerManager.Player> players, int potAmount, int participationMoney);
 	public abstract bool IsValidCommand(string command);
 }
 

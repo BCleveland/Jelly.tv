@@ -12,7 +12,7 @@ public class ADSMinigame : Minigame
 		return Commands.ADSCommandDict.ContainsKey(command);
 	}
 
-	public override MinigameResult ProcessGameLogic(List<Player> players, int potAmount, int participationMoney)
+	public override MinigameResult ProcessGameLogic(List<PlayerManager.Player> players, int potAmount, int participationMoney)
 	{
 		//3x3 matrix of results. x is p1, y is p2 command
 		string result = new string[][]
@@ -20,8 +20,8 @@ public class ADSMinigame : Minigame
 			new string[]{"tie", "p1", "p2"},
 			new string[]{"p2", "tie", "p1"},
 			new string[]{"p1", "p2", "lose"}
-		}[(int)Commands.ADSCommandDict[players[1].LastCommand]]
-		 [(int)Commands.ADSCommandDict[players[0].LastCommand]];
+		}[(int)Commands.ADSCommandDict[players[1].MiniGameCommand]]
+		 [(int)Commands.ADSCommandDict[players[0].MiniGameCommand]];
 
 		MinigameResult output = new MinigameResult() { CoroutineToPlay = "ADSResult" };
 
@@ -29,7 +29,7 @@ public class ADSMinigame : Minigame
 		{
 			//split the pot
 			int amount = Mathf.FloorToInt(potAmount / 2.0f) + participationMoney;
-			foreach (Player p in players)
+			foreach (PlayerManager.Player p in players)
 			{
 				output.UserResults.Add(p.Id, PlayerOutcome.Tie);
 				output.UserEarnings.Add(p.Id, amount);
@@ -38,7 +38,7 @@ public class ADSMinigame : Minigame
 		else if (result == "lose")
 		{
 			//neither player earns anything other than participation
-			foreach(Player p in players)
+			foreach(PlayerManager.Player p in players)
 			{
 				output.UserResults.Add(p.Id, PlayerOutcome.Lost);
 				output.UserEarnings.Add(p.Id, participationMoney);
@@ -46,11 +46,11 @@ public class ADSMinigame : Minigame
 		}
 		else
 		{
-			Player winner = players[(result == "p1") ? 0 : 1];
-			Player loser =  players[(result == "p1") ? 1 : 0];
+			PlayerManager.Player winner = players[(result == "p1") ? 0 : 1];
+			PlayerManager.Player loser =  players[(result == "p1") ? 1 : 0];
 
 			int winnerAmount = potAmount;
-			if (winner.LastCommand == "Steal")
+			if (winner.MiniGameCommand == "Steal")
 				winnerAmount = Mathf.FloorToInt(winnerAmount * k_StealModifier);
 			winnerAmount += participationMoney;
 
