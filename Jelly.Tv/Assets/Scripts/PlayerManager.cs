@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager> {
 
-    class Player {
+    public class Player {
+        private int m_lastGameId;
+        public int LastGameId { get => m_lastGameId; set => m_lastGameId = value; }
+        public int Money { get; set; }
+        public string Id { get; set; }
+        public string MiniGameCommand { get; set; }
+
         public Player(string id, int money = 0) {
             Id = id;
             Money = money;
         }
-        public string Id { get; set; }
-        public int Money { get; set; }
     }
-    class PlayerData {
+
+    [System.Serializable]
+    public class PlayerData {
         public string Id { get; set; }
         public int Money { get; set; }
     }
@@ -22,6 +28,16 @@ public class PlayerManager : Singleton<PlayerManager> {
 
     private void Start() {
         LoadPlayers();
+    }
+
+    public void SavePlayers() {
+        List<PlayerData> players = new List<PlayerData>();
+        foreach (var p in m_playerDictionary) {
+            players.Add(new PlayerData() { Id = p.Value.Id, Money = p.Value.Money });
+        }
+
+        string json = JsonUtility.ToJson(players);
+        PlayerPrefs.SetString("PlayerData", json);
     }
 
     /// <summary>
@@ -36,12 +52,6 @@ public class PlayerManager : Singleton<PlayerManager> {
             SetPlayerActive(id);
         }
     }
-    /// <summary>
-    /// Registers a new Player if they aren't already registered.
-    /// </summary>
-    /// <param name="id">The Twitch Id of the player</param>
-    /// <returns>Retrns true if the player has been registered and false if the player is already registered.</returns>
-    public bool RegisterPlayer(string id) => m_playerDictionary.AddUnique(id, new Player(id));
 
 
     private void SetPlayerActive(string id) {
@@ -63,16 +73,19 @@ public class PlayerManager : Singleton<PlayerManager> {
     /// <param name="id">The Twitch Id of the player</param>
     /// <returns>Returns true if a player already exists and false if they don't.</returns>
     private bool CheckPlayerExists(string id) => m_playerDictionary.ContainsKey(id);
-    
-
+    /// <summary>
+    /// Registers a new Player if they aren't already registered.
+    /// </summary>
+    /// <param name="id">The Twitch Id of the player</param>
+    /// <returns>Retrns true if the player has been registered and false if the player is already registered.</returns>
+    private bool RegisterPlayer(string id) => m_playerDictionary.AddUnique(id, new Player(id));
 
     private void LoadPlayers() {
-        //Load Players from JSON
+        List<PlayerData> players = JsonUtility.FromJson<List<PlayerData>>(PlayerPrefs.GetString("PlayerData"));
     }
-    
+
 
 }
-
 
 public static class HelperExtensions {
     public static bool AddUnique<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value) {
