@@ -23,7 +23,7 @@ public class PlayerManager : Singleton<PlayerManager> {
         public int Money { get; set; }
     }
 
-    private Dictionary<string, Player> m_playerDictionary;
+    private Dictionary<string, Player> m_playerDictionary = new Dictionary<string, Player>();
     private List<Player> m_activePlayers = new List<Player>();
 
     private void Start() {
