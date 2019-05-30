@@ -12,37 +12,37 @@ public class MinigameManager : Singleton<MinigameManager>
 
 	private int m_LastMinigameId = -1;
 	private Minigame m_CurrentMinigame;
-	private void Awake()
-	{
-		SetupNextMinigame();
-	}
-	public void SetupNextMinigame()
-	{
-		m_LastMinigameId++;
-		m_CurrentMinigame = new ADSMinigame();
-	}
 	public void StartMinigame(List<PlayerManager.Player> participants)
 	{
+		m_LastMinigameId++;
 		//todo
 		//get the int of currentMinigame - player last minigame
 		float longestInQueue = 0.0f;
 		float queueMultiplier = 1.0f + (longestInQueue * m_QueueMultiplier);
 		int participationAmount = Mathf.FloorToInt(m_ParticipationMoney * queueMultiplier);
 		int victoryAmount = Mathf.FloorToInt(m_WinMoney * queueMultiplier);
-		MinigameResult result = m_CurrentMinigame.
-			ProcessGameLogic(participants, victoryAmount, participationAmount);
+		m_CurrentMinigame = new ADSMinigame(participants, victoryAmount, participationAmount);
+		RegisterCommands();
+	}
+	public void MinigameOver(MinigameResult result)
+	{
+		//do animations here
 		Debug.Log("MINIGAME HAS BEEN PLAYED");
-		foreach(string id in result.UserResults.Keys)
+		foreach (string id in result.UserResults.Keys)
 		{
 			Debug.Log(id + ": " + result.UserResults[id]);
 		}
+		UnregisterCommands();
+		m_CurrentMinigame = null;
 	}
-	public bool IsValidCommand(string command)
+	private void RegisterCommands()
 	{
-		if (m_CurrentMinigame != null)
-			return m_CurrentMinigame.IsValidCommand(command);
-		//if no minigame, then there aren't any minigame specific commands
-		return false;
+		var commandList = TwitchClient.Instance.Commands;
+		m_CurrentMinigame.RegisterCommands(commandList);
 	}
-
+	private void UnregisterCommands()
+	{
+		var commandList = TwitchClient.Instance.Commands;
+		m_CurrentMinigame.UnregisterCommands(commandList);
+	}
 }

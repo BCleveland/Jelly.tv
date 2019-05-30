@@ -12,8 +12,10 @@ using UnityEngine;
 
 public abstract class Minigame
 {
-	public abstract MinigameResult ProcessGameLogic(List<PlayerManager.Player> players, int potAmount, int participationMoney);
-	public abstract bool IsValidCommand(string command);
+	public abstract MinigameResult ProcessGameLogic();
+	public abstract void RegisterCommands(List<TwitchCommand> commandList);
+	public abstract void UnregisterCommands(List<TwitchCommand> commandList);
+	public List<TwitchCommand> MinigameCommands;
 }
 
 public class MinigameResult
