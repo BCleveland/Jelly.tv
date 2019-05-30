@@ -17,6 +17,7 @@ public class PlayerManager : Singleton<PlayerManager> {
         public string Id { get => m_id; set => m_id = value; }
         public string UserName { get => m_userName; set => m_userName = value; }
         public string MiniGameCommand { get => m_miniGameCommand; set => m_miniGameCommand = value; }
+        public Slime Slime { get; set; }
 
         public Player(string id, int money = 0) {
             Id = id;
@@ -59,7 +60,11 @@ public class PlayerManager : Singleton<PlayerManager> {
             SetPlayerActive(id);
         }
         Slime slime = Lobby.Instance.GetSoullessSlime();
-        slime.SetPlayer(m_playerDictionary[id]);
+        if (slime) {
+            slime.SetPlayer(m_playerDictionary[id]);
+            m_playerDictionary[id].Slime = slime;
+        }
+        Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id]);
     }
 
     public void Logout(string id) {
