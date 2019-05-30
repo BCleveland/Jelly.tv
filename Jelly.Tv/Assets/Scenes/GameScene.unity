@@ -316,6 +316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb54dc609703e54f9ad988572528371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ParticipationMoney: 50
+  m_WinMoney: 500
+  m_QueueMultiplier: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
