@@ -6,12 +6,12 @@ using TwitchLib.Client.Models;
 using System;
 using TwitchLib.Client.Events;
 
-public class TwitchClient : MonoBehaviour
+public class TwitchClient : Singleton<TwitchClient>
 {
 	public Client client = null;
 	[SerializeField] private string channel_name = "mightbeabitmagic";
 
-	protected List<TwitchCommand> m_commands = null;
+	public List<TwitchCommand> Commands { get; set; }
 
 	private void Awake()
 	{
@@ -22,7 +22,7 @@ public class TwitchClient : MonoBehaviour
 		client = new Client();
 		client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		m_commands = new List<TwitchCommand>();
+		Commands = new List<TwitchCommand>();
 		AddCommands();
 
 		client.Connect();
@@ -33,11 +33,11 @@ public class TwitchClient : MonoBehaviour
 
 	private void AddCommands()
 	{
-		m_commands.Add(new TwitchCommand("screm", Screm));
+		Commands.Add(new TwitchCommand("screm", Screm));
 		//login command
 		//register command
 		//info command
-		m_commands.Add(new TwitchCommand("info", InfoCommand));
+		Commands.Add(new TwitchCommand("info", InfoCommand));
 
 	}
 
@@ -60,7 +60,7 @@ public class TwitchClient : MonoBehaviour
 	{
 		
 		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
-		foreach (var item in m_commands)
+		foreach (var item in Commands)
 		{
 			if (item.CommandName == e.Command.CommandText)
 			{
