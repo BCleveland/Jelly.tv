@@ -10872,11 +10872,21 @@ MonoBehaviour:
   - {fileID: -4418565592591816596, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
   - {fileID: 6578940403003585502, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
   m_slimeShapes:
-  - {fileID: 966244148376011476, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
-  - {fileID: 6476242193474668901, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
-  - {fileID: -3072965989887792172, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
-  - {fileID: -3719954815959297096, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
-  - {fileID: -8244167238689090296, guid: 80b3063f4fe643f4fb90f290da9329e3, type: 3}
+  - shapeSprite: {fileID: 966244148376011476, guid: 80b3063f4fe643f4fb90f290da9329e3,
+      type: 3}
+    facePos: {x: 0.06, y: -1.76, z: 0}
+  - shapeSprite: {fileID: 6476242193474668901, guid: 80b3063f4fe643f4fb90f290da9329e3,
+      type: 3}
+    facePos: {x: 0.24, y: 1.02, z: 0}
+  - shapeSprite: {fileID: -3072965989887792172, guid: 80b3063f4fe643f4fb90f290da9329e3,
+      type: 3}
+    facePos: {x: -0.02, y: -2.31, z: 0}
+  - shapeSprite: {fileID: -3719954815959297096, guid: 80b3063f4fe643f4fb90f290da9329e3,
+      type: 3}
+    facePos: {x: 0.05, y: -0.45, z: 0}
+  - shapeSprite: {fileID: -8244167238689090296, guid: 80b3063f4fe643f4fb90f290da9329e3,
+      type: 3}
+    facePos: {x: -0.32, y: -0.36, z: 0}
 --- !u!1 &1147577249
 GameObject:
   m_ObjectHideFlags: 0
