@@ -29,6 +29,7 @@ public class TwitchClient : Singleton<TwitchClient>
 		client.OnConnected += ConnectedtoChannel;
 		client.OnMessageReceived += MyMessageReceivedFunction;
 		client.OnChatCommandReceived += CommandRecieved;
+
 	}
 
 	private void AddCommands()
@@ -72,6 +73,7 @@ public class TwitchClient : Singleton<TwitchClient>
 				Commands[i].command.Invoke(sender, e);
 			}
 		}
+		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
 	}
 
 	private void Update()
