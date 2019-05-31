@@ -29,6 +29,7 @@ public class TwitchClient : MonoBehaviour
 		client.OnConnected += ConnectedtoChannel;
 		client.OnMessageReceived += MyMessageReceivedFunction;
 		client.OnChatCommandReceived += CommandRecieved;
+
 	}
 
 	private void AddCommands()
@@ -67,6 +68,7 @@ public class TwitchClient : MonoBehaviour
 				item.command.Invoke(sender, e);
 			}
 		}
+		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
 	}
 
 	private void Update()
