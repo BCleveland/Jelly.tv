@@ -44,7 +44,7 @@ public class TwitchClient : Singleton<TwitchClient>
 
 	private void Login(object sender, OnChatCommandReceivedArgs e)
 	{
-		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId);
+		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId, e.Command.ChatMessage.Username);
 	}
 	private void Screm(object sender, OnChatCommandReceivedArgs e)
 	{
