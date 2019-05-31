@@ -50,8 +50,7 @@ public class MinigameManager : Singleton<MinigameManager>
 			output += id + ": " + result.UserResults[id];
 		}
 		TwitchClient.Instance.client.SendMessage(TwitchClient.Instance.client.JoinedChannels[0], output);
-
-UnregisterCommands();
+		UnregisterCommands();
 		m_CurrentMinigame = null;
 	}
 	private void RegisterCommands()
