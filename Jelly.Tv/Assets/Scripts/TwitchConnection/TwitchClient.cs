@@ -8,11 +8,9 @@ using TwitchLib.Client.Events;
 
 public class TwitchClient : Singleton<TwitchClient>
 {
-	public Client client = null;
+	public static Client client = null;
 	[SerializeField] private string channel_name = "mightbeabitmagic";
-
-	public List<TwitchCommand> Commands { get; set; }
-
+	private CommandManager commandManager = null;
 	private void Awake()
 	{
 		Application.runInBackground = true;

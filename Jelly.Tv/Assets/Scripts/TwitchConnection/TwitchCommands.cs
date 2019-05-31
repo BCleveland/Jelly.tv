@@ -7,6 +7,7 @@ using TwitchLib.Client.Events;
 public class TwitchCommand
 {
 	public string CommandName { get; set; }
+	public ECommandType m_commandType = ECommandType.Default;
 	public delegate void Action(object sender, OnChatCommandReceivedArgs e);
 
 	public Action command = null;
@@ -17,4 +18,11 @@ public class TwitchCommand
 		this.command = command;
 	}
 
+}
+
+
+public enum ECommandType
+{
+	Default,
+	Duel
 }
