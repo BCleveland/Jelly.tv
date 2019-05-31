@@ -34,6 +34,8 @@ public class PlayerManager : Singleton<PlayerManager> {
     private Dictionary<string, Player> m_playerDictionary = new Dictionary<string, Player>();
     private List<Player> m_activePlayers = new List<Player>();
 
+    public Dictionary<string, Player> PlayerDictioary { get => m_playerDictionary; }
+
     private void Start() {
         LoadPlayers();
     }
@@ -52,23 +54,27 @@ public class PlayerManager : Singleton<PlayerManager> {
     /// Adds a player to the active player list if they're not already in it.
     /// </summary>
     /// <param name="id">The Twitch Id of the player</param>
-    public void Login(string id) {
+    public void Login(string id, string userName) {
         if (CheckPlayerExists(id)) {
             SetPlayerActive(id);
         } else {
             RegisterPlayer(id);
             SetPlayerActive(id);
         }
+        m_playerDictionary[id].UserName = userName;
         Slime slime = Lobby.Instance.GetSoullessSlime();
         if (slime) {
             slime.SetPlayer(m_playerDictionary[id]);
             m_playerDictionary[id].Slime = slime;
         }
-        Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id]);
+        Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id], 0.0f);
     }
 
     public void Logout(string id) {
-        if (CheckPlayerExists(id)) m_activePlayers.Remove(m_playerDictionary[id]);
+        if (CheckPlayerExists(id)) {
+            m_activePlayers.Remove(m_playerDictionary[id]);
+            Lobby.Instance.Logout(m_playerDictionary[id]);
+        }
     }
 
 

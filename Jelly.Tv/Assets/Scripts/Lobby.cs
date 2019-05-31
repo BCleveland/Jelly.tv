@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Priority_Queue;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,12 +11,14 @@ public class Lobby : Singleton<Lobby> {
     [SerializeField] private Claw m_leftClaw = null;
     [SerializeField] private Claw m_rightClaw = null;
 
-    private Queue<PlayerManager.Player> m_playerQueue = new Queue<PlayerManager.Player>();
+    private SimplePriorityQueue<PlayerManager.Player> m_playerQueue = new SimplePriorityQueue<PlayerManager.Player>();
+
     private List<Slime> m_slimes;
 
 
     public Vector3 StartingPosition { get => m_startingPosition; }
-    public Queue<PlayerManager.Player> PlayerQueue { get => m_playerQueue; set => m_playerQueue = value; }
+
+    public SimplePriorityQueue<PlayerManager.Player> PlayerQueue { get => m_playerQueue; set => m_playerQueue = value; }
 
     void Start() {
         m_slimes = new List<Slime>();
@@ -28,7 +31,7 @@ public class Lobby : Singleton<Lobby> {
 
     public PlayerManager.Player GetNextPlayer() {
         PlayerManager.Player player = PlayerQueue.Dequeue();
-        PlayerQueue.Enqueue(player);
+        PlayerQueue.Enqueue(player, 0.0f);
         return player;
     }
 
@@ -39,5 +42,13 @@ public class Lobby : Singleton<Lobby> {
             m_slimes.Add(slime);
         }
         return slime;
+    }
+
+    public void Logout(PlayerManager.Player player) {
+        PlayerQueue.Remove(player);
+        if (player.Slime) {
+            m_slimes.Remove(player.Slime);
+            Destroy(player.Slime);
+        }
     }
 }
