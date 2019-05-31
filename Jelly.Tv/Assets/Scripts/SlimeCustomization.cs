@@ -63,7 +63,7 @@ public class SlimeCustomization : MonoBehaviour
     public void SetupSlimeShapeNames()
     {
         m_shapeNames = new string[m_slimeShapes.Length];
-        for (int i = 0; i < m_slimeFaces.Length; i++)
+        for (int i = 0; i < m_slimeShapes.Length; i++)
         {
             string shapeType = m_slimeShapes[i].name.Replace("slime_face_", "");
             m_shapeNames[i] = shapeType;
