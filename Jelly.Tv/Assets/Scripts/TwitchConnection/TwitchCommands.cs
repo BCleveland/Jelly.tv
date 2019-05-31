@@ -12,7 +12,7 @@ public class TwitchCommand
 
 	public Action command = null;
 
-	public TwitchCommand(string name, Action command)
+	public TwitchCommand(string name, Action command, ECommandType type = ECommandType.Default)
 	{
 		CommandName = name;
 		this.command = command;

@@ -20,40 +20,13 @@ public class TwitchClient : Singleton<TwitchClient>
 		client = new Client();
 		client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		Commands = new List<TwitchCommand>();
-		AddCommands();
-
 		client.Connect();
 		client.OnConnected += ConnectedtoChannel;
-		client.OnMessageReceived += MyMessageReceivedFunction;
+		//client.OnMessageReceived += MyMessageReceivedFunction;
 		client.OnChatCommandReceived += CommandRecieved;
 
 	}
 
-	private void AddCommands()
-	{
-		Commands.Add(new TwitchCommand("screm", Screm));
-		//login command
-		Commands.Add(new TwitchCommand("login", Login));
-		//register command
-		//info command
-		Commands.Add(new TwitchCommand("info", InfoCommand));
-
-	}
-
-	private void Login(object sender, OnChatCommandReceivedArgs e)
-	{
-		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId, e.Command.ChatMessage.Username);
-	}
-	private void Screm(object sender, OnChatCommandReceivedArgs e)
-	{
-		client.SendMessage(client.JoinedChannels[0], "i screm");
-	}
-
-	private void InfoCommand(object sender, OnChatCommandReceivedArgs e)
-	{
-		client.SendMessage(client.JoinedChannels[0], "Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!");
-	}
 
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
 	{
@@ -64,11 +37,11 @@ public class TwitchClient : Singleton<TwitchClient>
 	{
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
 		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
-		for(int i = 0; i < Commands.Count; i++)
+		for(int i = 0; i < commandManager.Commands.Count; i++)
 		{
-			if (Commands[i].CommandName == e.Command.CommandText)
+			if (commandManager.Commands[i].CommandName == e.Command.CommandText)
 			{
-				Commands[i].command.Invoke(sender, e);
+				commandManager.Commands[i].command.Invoke(sender, e);
 			}
 		}
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
@@ -81,11 +54,5 @@ public class TwitchClient : Singleton<TwitchClient>
 			client.SendMessage(client.JoinedChannels[0], "YEETHAW");
 		}
 	}
-
-	private void MyMessageReceivedFunction(object sender, TwitchLib.Client.Events.OnMessageReceivedArgs e)
-	{
-		Debug.Log("The bot just read a message in chat");
-	}
-
 
 }
