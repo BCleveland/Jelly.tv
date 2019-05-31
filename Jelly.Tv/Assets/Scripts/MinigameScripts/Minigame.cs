@@ -16,6 +16,14 @@ public abstract class Minigame
 	public abstract void RegisterCommands(List<TwitchCommand> commandList);
 	public abstract void UnregisterCommands(List<TwitchCommand> commandList);
 	public List<TwitchCommand> MinigameCommands;
+	protected void DishOutEarnings(List<PlayerManager.Player> players, MinigameResult result)
+	{
+		foreach(var player in players)
+		{
+			player.Money += result.UserEarnings[player.Id];
+			player.MiniGameCommand = "";
+		}
+	}
 }
 
 public class MinigameResult

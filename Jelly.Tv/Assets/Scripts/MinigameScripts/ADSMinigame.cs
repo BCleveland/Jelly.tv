@@ -69,6 +69,7 @@ public class ADSMinigame : Minigame
 			output.UserResults.Add(loser.Id, PlayerOutcome.Lost);
 			output.UserEarnings.Add(loser.Id, participationMoney);
 		}
+		DishOutEarnings(m_Players, output);
 		return output;
 	}
 
