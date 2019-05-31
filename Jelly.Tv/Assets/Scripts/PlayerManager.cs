@@ -5,11 +5,19 @@ using UnityEngine;
 public class PlayerManager : Singleton<PlayerManager> {
 
     public class Player {
+        #region Private Variables
         private int m_lastGameId;
+        private int m_money;
+        private string m_id;
+        private string m_userName;
+        private string m_miniGameCommand;
+        #endregion
         public int LastGameId { get => m_lastGameId; set => m_lastGameId = value; }
-        public int Money { get; set; }
-        public string Id { get; set; }
-        public string MiniGameCommand { get; set; }
+        public int Money { get => m_money; set => m_money = value; }
+        public string Id { get => m_id; set => m_id = value; }
+        public string UserName { get => m_userName; set => m_userName = value; }
+        public string MiniGameCommand { get => m_miniGameCommand; set => m_miniGameCommand = value; }
+        public Slime Slime { get; set; }
 
         public Player(string id, int money = 0) {
             Id = id;
@@ -51,6 +59,16 @@ public class PlayerManager : Singleton<PlayerManager> {
             RegisterPlayer(id);
             SetPlayerActive(id);
         }
+        Slime slime = Lobby.Instance.GetSoullessSlime();
+        if (slime) {
+            slime.SetPlayer(m_playerDictionary[id]);
+            m_playerDictionary[id].Slime = slime;
+        }
+        Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id]);
+    }
+
+    public void Logout(string id) {
+        if (CheckPlayerExists(id)) m_activePlayers.Remove(m_playerDictionary[id]);
     }
 
 
@@ -78,10 +96,15 @@ public class PlayerManager : Singleton<PlayerManager> {
     /// </summary>
     /// <param name="id">The Twitch Id of the player</param>
     /// <returns>Retrns true if the player has been registered and false if the player is already registered.</returns>
-    private bool RegisterPlayer(string id) => m_playerDictionary.AddUnique(id, new Player(id));
+    private bool RegisterPlayer(string id, int money = 0) => m_playerDictionary.AddUnique(id, new Player(id, money));
 
     private void LoadPlayers() {
         List<PlayerData> players = JsonUtility.FromJson<List<PlayerData>>(PlayerPrefs.GetString("PlayerData"));
+        if (players == null) SavePlayers();
+        players = JsonUtility.FromJson<List<PlayerData>>(PlayerPrefs.GetString("PlayerData"));
+        players.ForEach(p => {
+            RegisterPlayer(p.Id, p.Money);
+        });
     }
 
 

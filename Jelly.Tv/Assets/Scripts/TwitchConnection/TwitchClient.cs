@@ -6,12 +6,12 @@ using TwitchLib.Client.Models;
 using System;
 using TwitchLib.Client.Events;
 
-public class TwitchClient : MonoBehaviour
+public class TwitchClient : Singleton<TwitchClient>
 {
 	public Client client = null;
 	[SerializeField] private string channel_name = "mightbeabitmagic";
 
-	protected List<TwitchCommand> m_commands = null;
+	public List<TwitchCommand> Commands { get; set; }
 
 	private void Awake()
 	{
@@ -22,7 +22,7 @@ public class TwitchClient : MonoBehaviour
 		client = new Client();
 		client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		m_commands = new List<TwitchCommand>();
+		Commands = new List<TwitchCommand>();
 		AddCommands();
 
 		client.Connect();
@@ -34,14 +34,19 @@ public class TwitchClient : MonoBehaviour
 
 	private void AddCommands()
 	{
-		m_commands.Add(new TwitchCommand("screm", Screm));
+		Commands.Add(new TwitchCommand("screm", Screm));
 		//login command
+		Commands.Add(new TwitchCommand("login", Login));
 		//register command
 		//info command
-		m_commands.Add(new TwitchCommand("info", InfoCommand));
+		Commands.Add(new TwitchCommand("info", InfoCommand));
 
 	}
 
+	private void Login(object sender, OnChatCommandReceivedArgs e)
+	{
+		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId);
+	}
 	private void Screm(object sender, OnChatCommandReceivedArgs e)
 	{
 		client.SendMessage(client.JoinedChannels[0], "i screm");
@@ -59,13 +64,13 @@ public class TwitchClient : MonoBehaviour
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
-		
+		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
 		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
-		foreach (var item in m_commands)
+		for(int i = 0; i < Commands.Count; i++)
 		{
-			if (item.CommandName == e.Command.CommandText)
+			if (Commands[i].CommandName == e.Command.CommandText)
 			{
-				item.command.Invoke(sender, e);
+				Commands[i].command.Invoke(sender, e);
 			}
 		}
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
