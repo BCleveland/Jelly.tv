@@ -103,12 +103,12 @@ public class ADSMinigame : Minigame
 	private void DoCommand(string id, string command)
 	{
 		PlayerManager.Player player = m_Players.Find(p => p.Id == id);
-		if (player.MiniGameCommand != "")
+		if (player.MiniGameCommand == "" || player.MiniGameCommand == null)
 		{
 			player.MiniGameCommand = command;
 		}
 		//check if all
-		if(m_Players.FindAll(p => p.MiniGameCommand != "").Count == 0)
+		if(m_Players.FindAll(p => p.MiniGameCommand == "" || p.MiniGameCommand == null).Count == 0)
 		{
 			MinigameManager.Instance.MinigameOver(ProcessGameLogic());
 		}

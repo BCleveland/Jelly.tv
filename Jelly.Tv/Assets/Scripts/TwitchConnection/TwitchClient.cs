@@ -35,12 +35,17 @@ public class TwitchClient : Singleton<TwitchClient>
 	{
 		Commands.Add(new TwitchCommand("screm", Screm));
 		//login command
+		Commands.Add(new TwitchCommand("login", Login));
 		//register command
 		//info command
 		Commands.Add(new TwitchCommand("info", InfoCommand));
 
 	}
 
+	private void Login(object sender, OnChatCommandReceivedArgs e)
+	{
+		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId);
+	}
 	private void Screm(object sender, OnChatCommandReceivedArgs e)
 	{
 		client.SendMessage(client.JoinedChannels[0], "i screm");
@@ -58,13 +63,13 @@ public class TwitchClient : Singleton<TwitchClient>
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
-		
+		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
 		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
-		foreach (var item in Commands)
+		for(int i = 0; i < Commands.Count; i++)
 		{
-			if (item.CommandName == e.Command.CommandText)
+			if (Commands[i].CommandName == e.Command.CommandText)
 			{
-				item.command.Invoke(sender, e);
+				Commands[i].command.Invoke(sender, e);
 			}
 		}
 	}
