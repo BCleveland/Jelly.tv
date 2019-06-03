@@ -8,40 +8,47 @@ using TwitchLib.Client.Events;
 
 public class TwitchClient : Singleton<TwitchClient>
 {
-	public static Client client = null;
-	[SerializeField] private string channel_name = "mightbeabitmagic";
-	private CommandManager commandManager = null;
+
+    [SerializeField] private string channel_name = "mightbeabitmagic";
+
+    private Client m_client = null;
+	private CommandManager m_commandManager = null;
+
+	public Client Client { get => m_client; private set => m_client = value; }
+	public CommandManager CommandManager { get => m_commandManager; private set => m_commandManager = value; }
+
+
 	private void Awake()
 	{
 		Application.runInBackground = true;
 
 		//Init bot and tell to join
 		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
-		client = new Client();
-		client.Initialize(credidentials, channel_name, '!', '!', false);
+		Client = new Client();
+		Client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		client.Connect();
-		client.OnConnected += ConnectedtoChannel;
+		Client.Connect();
+		Client.OnConnected += ConnectedtoChannel;
 		//client.OnMessageReceived += MyMessageReceivedFunction;
-		client.OnChatCommandReceived += CommandRecieved;
+		Client.OnChatCommandReceived += CommandRecieved;
 
 	}
 
 
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
 	{
-		client.SendMessage(client.JoinedChannels[0], "owo jelly boi is here!");
+		Client.SendMessage(Client.JoinedChannels[0], "owo jelly boi is here!");
 	}
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
-		client.SendMessage(client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
-		for(int i = 0; i < commandManager.Commands.Count; i++)
+		Client.SendMessage(Client.JoinedChannels[0], "Beep boop. Command recieved! " + e.Command.CommandText);
+		for(int i = 0; i < m_commandManager.Commands.Count; i++)
 		{
-			if (commandManager.Commands[i].CommandName == e.Command.CommandText)
+			if (m_commandManager.Commands[i].CommandName == e.Command.CommandText)
 			{
-				commandManager.Commands[i].command.Invoke(sender, e);
+				m_commandManager.Commands[i].command.Invoke(sender, e);
 			}
 		}
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
@@ -51,7 +58,7 @@ public class TwitchClient : Singleton<TwitchClient>
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
-			client.SendMessage(client.JoinedChannels[0], "YEETHAW");
+			Client.SendMessage(Client.JoinedChannels[0], "YEETHAW");
 		}
 	}
 

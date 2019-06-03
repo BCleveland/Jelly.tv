@@ -31,12 +31,12 @@ public class CommandManager
 	}
 	private void Command_Screm(object sender, OnChatCommandReceivedArgs e)
 	{
-		TwitchClient.client.SendMessage(TwitchClient.client.JoinedChannels[0], "i screm");
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], "i screm");
 	}
 
 	private void Command_Info(object sender, OnChatCommandReceivedArgs e)
 	{
-		TwitchClient.client.SendMessage(TwitchClient.client.JoinedChannels[0], "Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!");
+        TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], "Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!");
 	}
 
 	private void Command_ListCommands()
@@ -47,7 +47,7 @@ public class CommandManager
 		{
 			commands += item.CommandName + " ";
 		}
-		TwitchClient.client.SendMessage(TwitchClient.client.JoinedChannels[0], commands);
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], commands);
 	}
 
 	public List<TwitchCommand> GetAllCommandsofType(ECommandType type)
