@@ -83,7 +83,7 @@ public class SlimeCustomization : MonoBehaviour
             m_faceDictionary.Add(command, m_slimeFaces[i]);
             if(TwitchClient != null)
             {
-                TwitchClient.Commands.Add(command);
+                TwitchClient.CommandManager.Commands.Add(command);
             }
         }
 
@@ -93,7 +93,7 @@ public class SlimeCustomization : MonoBehaviour
             m_shapeDictionary.Add(command, m_slimeShapes[i]);
             if (TwitchClient != null)
             {
-                TwitchClient.Commands.Add(command);
+                TwitchClient.CommandManager.Commands.Add(command);
             }
         }
     }

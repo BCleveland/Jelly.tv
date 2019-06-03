@@ -35,7 +35,7 @@ public class MinigameManager : Singleton<MinigameManager>
 		int participationAmount = Mathf.FloorToInt(m_ParticipationMoney * queueMultiplier);
 		int victoryAmount = Mathf.FloorToInt(m_WinMoney * queueMultiplier);
 		m_CurrentMinigame = new ADSMinigame(participants, victoryAmount, participationAmount);
-		TwitchClient.Instance.client.SendMessage(TwitchClient.Instance.client.JoinedChannels[0], "Starting Minigame!" + 
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], "Starting Minigame!" + 
 			victoryAmount);
 		RegisterCommands();
 	}
@@ -49,18 +49,18 @@ public class MinigameManager : Singleton<MinigameManager>
 			Debug.Log(id + ": " + result.UserResults[id]);
 			output += id + ": " + result.UserResults[id];
 		}
-		TwitchClient.Instance.client.SendMessage(TwitchClient.Instance.client.JoinedChannels[0], output);
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], output);
 		UnregisterCommands();
 		m_CurrentMinigame = null;
 	}
 	private void RegisterCommands()
 	{
-		var commandList = TwitchClient.Instance.Commands;
+		var commandList = TwitchClient.Instance.CommandManager.Commands;
 		m_CurrentMinigame.RegisterCommands(commandList);
 	}
 	private void UnregisterCommands()
 	{
-		var commandList = TwitchClient.Instance.Commands;
+		var commandList = TwitchClient.Instance.CommandManager.Commands;
 		m_CurrentMinigame.UnregisterCommands(commandList);
 	}
 }
