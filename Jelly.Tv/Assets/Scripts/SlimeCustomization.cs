@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class SlimeCustomization : MonoBehaviour
 {
+    [System.Serializable]
+    public class SlimeBody
+    {
+        [SerializeField] public Sprite shapeSprite;
+        [SerializeField] public Vector3 facePos;
+    }
     /*
      * CURRENT SLIME FACES:
      * basic
@@ -19,7 +25,6 @@ public class SlimeCustomization : MonoBehaviour
     [Header("Slime Faces")]
     [SerializeField]
     Sprite[] m_slimeFaces = null;
-
     /*
      * CURRENT SLIME SHAPES:
      * basic
@@ -30,13 +35,13 @@ public class SlimeCustomization : MonoBehaviour
      */
     [Header("Slime Shapes")]
     [SerializeField]
-    Sprite[] m_slimeShapes = null;
+    SlimeBody[] m_slimeShapes = null;
 
     private string[] m_faceNames;
     private string[] m_shapeNames;
 
     private Dictionary<TwitchCommand, Sprite> m_faceDictionary = new Dictionary<TwitchCommand, Sprite>();
-    private Dictionary<TwitchCommand, Sprite> m_shapeDictionary = new Dictionary<TwitchCommand, Sprite>();
+    private Dictionary<TwitchCommand, SlimeBody> m_shapeDictionary = new Dictionary<TwitchCommand, SlimeBody>();
 
     private TwitchClient TwitchClient = null;
 
@@ -65,7 +70,7 @@ public class SlimeCustomization : MonoBehaviour
         m_shapeNames = new string[m_slimeShapes.Length];
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
-            string shapeType = m_slimeShapes[i].name.Replace("slime_face_", "");
+            string shapeType = m_slimeShapes[i].shapeSprite.name.Replace("slime_face_", "");
             m_shapeNames[i] = shapeType;
         }
     }
@@ -105,7 +110,7 @@ public class SlimeCustomization : MonoBehaviour
                 {
                     if(slime.PlayerID == user)
                     {
-
+                        slime.FaceSpriteRenderer.sprite = m_slimeFaces[i];
                     }
                 }
             }
@@ -114,7 +119,22 @@ public class SlimeCustomization : MonoBehaviour
 
     public void SwapSlimeShapeSprite(object sender, OnChatCommandReceivedArgs e)
     {
-
+        string user = e.Command.ChatMessage.UserId;
+        string shapeTypeInput = e.Command.ArgumentsAsString;
+        for (int i = 0; i < m_faceNames.Length; i++)
+        {
+            if (shapeTypeInput == m_faceNames[i])
+            {
+                foreach (Slime slime in FindObjectsOfType<Slime>())
+                {
+                    if (slime.PlayerID == user)
+                    {
+                        slime.ShapeSpriteRenderer.sprite = m_slimeShapes[i].shapeSprite;
+                        slime.ShapeSpriteRenderer.gameObject.transform.localPosition = m_slimeShapes[i].facePos;
+                    }
+                }
+            }
+        }
     }
 
     // Update is called once per frame
