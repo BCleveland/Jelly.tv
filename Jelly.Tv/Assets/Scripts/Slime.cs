@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour {
 
+    [SerializeField]
+    public SpriteRenderer FaceSpriteRenderer;
+    [SerializeField]
+    public SpriteRenderer ShapeSpriteRenderer;
+
     private string m_playerID = "";
     private string m_state = "";
     private StateMachine<Slime> m_stateMachine = null;
-
 
     public string State {
         get => m_state;
