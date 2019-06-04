@@ -484,6 +484,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1075186541}
+  - {fileID: 1349182156}
   - {fileID: 827710325}
   - {fileID: 1026043921}
   m_Father: {fileID: 715730183}
@@ -1674,11 +1675,11 @@ RectTransform:
   m_Children:
   - {fileID: 1162182481}
   m_Father: {fileID: 615500815}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -121}
+  m_AnchoredPosition: {x: 0, y: -286}
   m_SizeDelta: {x: 373.1, y: 88.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &827710326
@@ -3946,6 +3947,163 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &989843684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989843685}
+  - component: {fileID: 989843687}
+  - component: {fileID: 989843686}
+  m_Layer: 0
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &989843685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989843684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1349182156}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &989843686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989843684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: Settings
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4279175682
+  m_fontColor: {r: 0.007843138, g: 0.039215688, b: 0.05882353, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 61.45
+  m_fontSizeBase: 14
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 514
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 10, z: 0, w: 10}
+  m_textInfo:
+    textComponent: {fileID: 989843686}
+    characterCount: 8
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 1
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &989843687
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989843684}
+  m_CullTransparentMesh: 0
 --- !u!1 &1009048584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,7 +6373,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 615500815}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16480,6 +16638,2245 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338925421}
   m_CullTransparentMesh: 0
+--- !u!1 &1349182155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349182156}
+  - component: {fileID: 1349182161}
+  - component: {fileID: 1349182160}
+  - component: {fileID: 1349182159}
+  - component: {fileID: 1349182158}
+  - component: {fileID: 1349182157}
+  m_Layer: 0
+  m_Name: Button - Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1349182156
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 989843685}
+  m_Father: {fileID: 615500815}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0, y: -121}
+  m_SizeDelta: {x: 373.1, y: 88.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1349182157
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1349182158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d12bfc32d0d797428cf0191288caabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugMode: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  StartRotation: {x: 0, y: 0, z: 0}
+  StartScale: {x: 1, y: 1, z: 1}
+  StartAlpha: 1
+  AllowMultipleClicks: 0
+  ButtonCategory: MainMenu
+  ButtonName: Settings
+  ClickMode: 0
+  DeselectButtonAfterClick: 0
+  DisableButtonBetweenClicksInterval: 0.2
+  DoubleClickRegisterInterval: 0.2
+  InputData:
+    EnableAlternateInputs: 1
+    InputMode: 2
+    KeyCode: 13
+    KeyCodeAlt: 32
+    VirtualButtonName: Submit
+    VirtualButtonNameAlt: Jump
+  LongClickRegisterInterval: 0.5
+  OnPointerEnter:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 3
+  OnPointerExit:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 4
+  OnPointerDown:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 5
+  OnPointerUp:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 6
+  OnClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.4
+    Enabled: 1
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: Example Clicks
+        SoundName: Cartoon Blip
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Organic
+    PresetName: JellyNormal
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 10, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 8
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
+        UseCustomFromAndTo: 0
+        Vibrato: 4
+        Elasticity: 0.5
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.3
+      Scale:
+        AnimationType: 4
+        Enabled: 1
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: -0.1, y: 0.1, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 16
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 0.4
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 1
+    m_behaviorType: 0
+  OnDoubleClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.2
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 1
+  OnLongClick:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0.2
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 2
+  OnSelected:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 7
+  OnDeselected:
+    Animators: []
+    ButtonAnimationType: 0
+    DeselectButton: 0
+    DisableInterval: 0
+    Enabled: 0
+    LoadSelectedPresetAtRuntime: 0
+    OnTrigger:
+      AnimatorEvents: []
+      Effect:
+        AutoSort: 1
+        Behavior: 0
+        CustomSortingOrder: 0
+        SortingSteps: 1
+        ParticleSystem: {fileID: 0}
+        StopBehavior: 1
+        CustomSortingLayer: Default
+      Event:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      GameEvents: []
+      SoundData:
+        SoundSource: 0
+        DatabaseName: General
+        SoundName: No Sound
+        AudioClip: {fileID: 0}
+        OutputAudioMixerGroup: {fileID: 0}
+    PresetCategory: Uncategorized
+    PresetName: Default
+    PunchAnimation:
+      AnimationType: 4
+      Move:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 4
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 4
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Ready: 1
+    SelectButton: 0
+    StateAnimation:
+      AnimationType: 5
+      Move:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 5
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 5
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    TriggerEventsAfterAnimation: 0
+    m_behaviorType: 8
+  NormalLoopAnimation:
+    Animation:
+      AnimationType: 3
+      Move:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 3
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Enabled: 0
+    IsPlaying: 0
+    LoopAnimationType: 0
+    LoadSelectedPresetAtRuntime: 0
+    PresetCategory: 
+    PresetName: 
+  SelectedLoopAnimation:
+    Animation:
+      AnimationType: 3
+      Move:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        Direction: 0
+        CustomPosition: {x: 0, y: 0, z: 0}
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Rotate:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        RotateMode: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Scale:
+        AnimationType: 3
+        Enabled: 0
+        From: {x: 0, y: 0, z: 0}
+        To: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: 0}
+        UseCustomFromAndTo: 0
+        Vibrato: 10
+        Elasticity: 1
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+      Fade:
+        AnimationType: 3
+        Enabled: 0
+        From: 0
+        To: 1
+        By: 0.5
+        UseCustomFromAndTo: 0
+        NumberOfLoops: -1
+        LoopType: 1
+        EaseType: 0
+        Ease: 1
+        AnimationCurve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        StartDelay: 0
+        Duration: 1
+    Enabled: 0
+    IsPlaying: 0
+    LoopAnimationType: 1
+    LoadSelectedPresetAtRuntime: 0
+    PresetCategory: 
+    PresetName: 
+  TargetLabel: 2
+  TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 989843686}
+--- !u!114 &1349182159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1349182160}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1349182160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1349182161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349182155}
+  m_CullTransparentMesh: 0
 --- !u!1 &1364466655
 GameObject:
   m_ObjectHideFlags: 0
@@ -18168,12 +20565,12 @@ PrefabInstance:
     - target: {fileID: 8583044382605491520, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2752
       objectReference: {fileID: 0}
     - target: {fileID: 8583044382605491520, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1261
       objectReference: {fileID: 0}
     - target: {fileID: 8583044382605491520, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
         type: 3}
@@ -18214,6 +20611,1717 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.PresetCategory
+      value: Organic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.PresetName
+      value: DropAndPop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Direction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Ease
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.From.z
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.RotateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Ease
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.From.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Ease
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Fade.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.PresetCategory
+      value: Organic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.PresetName
+      value: PopAndDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.22816835
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].value
+      value: 1.2861733
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: -0.08982998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: -0.08982998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.6220915
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].value
+      value: 1.1371747
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 0.94856524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 0.94856524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.72613853
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.73627746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: -1.5867386
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: -1.5867386
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].value
+      value: 0.0051574707
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.048303347
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].value
+      value: 0.28854316
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 7.8732495
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 7.8732495
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.10184101
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].value
+      value: -0.07756907
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 3.7581615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 3.7581615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.1691427
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.5604678
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: 5.091666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: 5.091666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].time
+      value: 0.6416942
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].value
+      value: -0.5875959
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].inSlope
+      value: 1.8110614
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].outSlope
+      value: 1.8110614
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].time
+      value: 0.9733818
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].value
+      value: 0.67883307
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].inSlope
+      value: -4.2502594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].outSlope
+      value: -4.2502594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].time
+      value: 0.98996425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].value
+      value: 0.88832426
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].inSlope
+      value: -2.3853254
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].outSlope
+      value: -2.3853254
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].value
+      value: 1.0051575
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[7].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.22024798
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].value
+      value: 1.9692707
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 0.9352582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 0.9352582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.65045136
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].value
+      value: 1.0910703
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 0.5003349
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 0.5003349
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.7293131
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.8114508
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: 1.217737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: 1.217737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].inSlope
+      value: -0.943337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].outSlope
+      value: -0.943337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Direction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Ease
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.To.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.RotateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Ease
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Duration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.EaseType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Ease
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.To
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.StartDelay
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].inSlope
+      value: 2.7912683
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].outSlope
+      value: 2.7912683
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.1591474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].value
+      value: 0.27871615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: -3.5244074
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: -3.5244074
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.36119476
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].value
+      value: 0.4033309
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: -2.5759792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: -2.5759792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.6268808
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.69904834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: -2.6110096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: -2.6110096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].time
+      value: 0.8133894
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].value
+      value: 0.8256105
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].inSlope
+      value: -1.7523863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].outSlope
+      value: -1.7523863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.data[5].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].inSlope
+      value: 7.0383096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].outSlope
+      value: 7.0383096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.017583081
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].value
+      value: 0.18718478
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 0.08300995
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 0.08300995
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.057600502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].value
+      value: 0.12739694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 4.0301647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 4.0301647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.09568673
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.25189704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: -3.516668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: -3.516668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].time
+      value: 0.15432346
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].value
+      value: 0.2683969
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].inSlope
+      value: -4.011477
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].outSlope
+      value: -4.011477
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].time
+      value: 0.6206393
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].value
+      value: 0.37496966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].inSlope
+      value: -1.7194864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].outSlope
+      value: -1.7194864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[5].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].inSlope
+      value: 4.481586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].outSlope
+      value: 4.481586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.data[6].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].inSlope
+      value: -5.9445815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].outSlope
+      value: -5.9445815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].time
+      value: 0.16861793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].value
+      value: -0.6560375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].inSlope
+      value: 1.6450882
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].outSlope
+      value: 1.6450882
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].time
+      value: 0.39923504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].value
+      value: 1.2821069
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].inSlope
+      value: 0.10174093
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].outSlope
+      value: 0.10174093
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].time
+      value: 0.5896755
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].value
+      value: 0.7484784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].inSlope
+      value: 1.7945546
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].outSlope
+      value: 1.7945546
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[3].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: ViewName
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668859284481139932, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: BehaviorAtStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334855962954104365, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 962.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334855962954104365, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425370780192886107, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425370780192886107, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133619622291667693, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 962.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133619622291667693, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146419916484048546, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 962.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146419916484048546, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -107.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 668507928610221108, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 962.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 668507928610221108, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812040898513823887, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 962.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812040898513823887, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -408
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748924933669752724, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748924933669752724, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748924933669752724, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748924933669752724, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086013315908226866, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086013315908226866, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086013315908226866, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086013315908226866, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086013315908226866, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814570399622452013, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814570399622452013, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814570399622452013, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814570399622452013, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814570399622452013, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034933282834112202, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034933282834112202, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034933282834112202, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034933282834112202, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034933282834112202, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134994888926197485, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134994888926197485, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134994888926197485, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134994888926197485, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968798370302785, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968798370302785, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968798370302785, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968798370302785, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848968798370302785, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150657961825717372, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150657961825717372, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150657961825717372, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150657961825717372, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150657961825717372, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680582436384862478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680582436384862478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680582436384862478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680582436384862478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680582436384862478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529482479082560099, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529482479082560099, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529482479082560099, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529482479082560099, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529482479082560099, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054107868326281478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054107868326281478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054107868326281478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054107868326281478, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411200271120516281, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411200271120516281, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411200271120516281, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411200271120516281, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411200271120516281, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853584246542044519, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853584246542044519, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853584246542044519, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853584246542044519, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668959862738177933, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668959862738177933, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668959862738177933, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668959862738177933, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668959862738177933, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145647615926497809, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145647615926497809, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145647615926497809, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145647615926497809, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145647615926497809, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884844454155469, guid: 90521b2c50cb85f4b9c80b36d24c4c7e, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884844454155469, guid: 90521b2c50cb85f4b9c80b36d24c4c7e, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884844454155469, guid: 90521b2c50cb85f4b9c80b36d24c4c7e, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884844454155469, guid: 90521b2c50cb85f4b9c80b36d24c4c7e, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190652614477560407, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190652614477560407, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190652614477560407, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190652614477560407, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190652614477560407, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866615812502893990, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866615812502893990, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866615812502893990, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866615812502893990, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713787072400799370, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713787072400799370, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713787072400799370, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713787072400799370, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713787072400799370, guid: 90521b2c50cb85f4b9c80b36d24c4c7e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90521b2c50cb85f4b9c80b36d24c4c7e, type: 3}
