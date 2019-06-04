@@ -19,34 +19,34 @@ public class TwitchClient : Singleton<TwitchClient>
 
 
 	private void Awake()
-	{
+	{
 		Application.runInBackground = true;
-		m_commandManager = new CommandManager();
-		Client = new Client();
+		m_commandManager = new CommandManager();
+		Client = new Client();
 		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
 		Client.Initialize(credidentials, channel_name, '!', '!', false);
-
+
 
 	}
 
-	public void ConnectBot()
-	{
-		Client = new Client();
-
-		channel_name = UserInputManager.HostChannelName;
-		//Init bot and tell to join
+	public void ConnectBot()
+	{
+		Client = new Client();
+
+		channel_name = UserInputManager.HostChannelName;
+		//Init bot and tell to join
 		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
 		Client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		Client.Connect();
-		Client.OnConnected += ConnectedtoChannel;
-		//client.OnMessageReceived += MyMessageReceivedFunction;
-		Client.OnChatCommandReceived += CommandRecieved;
-		Client.OnWhisperCommandReceived += WhisperCommandRecieved;
-	}
-
-	private void WhisperCommandRecieved(object sender, OnWhisperCommandReceivedArgs e)
-	{
+		Client.Connect();
+		Client.OnConnected += ConnectedtoChannel;
+		//client.OnMessageReceived += MyMessageReceivedFunction;
+		Client.OnChatCommandReceived += CommandRecieved;
+		Client.OnWhisperCommandReceived += WhisperCommandRecieved;
+	}
+
+	private void WhisperCommandRecieved(object sender, OnWhisperCommandReceivedArgs e)
+	{
 		Debug.Log(e.Command.WhisperMessage.Username + ": " + e.Command.WhisperMessage.UserId);
 		Client.SendWhisper(e.Command.WhisperMessage.UserId, " Beep boop. Command recieved! " + e.Command.CommandText);
 		for (int i = 0; i < m_commandManager.Commands.Count; i++)
@@ -57,9 +57,9 @@ public class TwitchClient : Singleton<TwitchClient>
 			}
 		}
 		Debug.Log(e.Command.WhisperMessage.Username + ": " + e.Command.WhisperMessage.UserId);
-
-	}
-
+
+	}
+
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
 	{
 		Client.SendMessage(Client.JoinedChannels[0], UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_BotEnters));
