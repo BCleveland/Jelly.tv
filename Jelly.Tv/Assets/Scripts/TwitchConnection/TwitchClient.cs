@@ -22,6 +22,8 @@ public class TwitchClient : Singleton<TwitchClient>
 	{
 		Application.runInBackground = true;
 
+		m_commandManager = new CommandManager();
+
 		//Init bot and tell to join
 		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
 		Client = new Client();
