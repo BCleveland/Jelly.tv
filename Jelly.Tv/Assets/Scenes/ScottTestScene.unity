@@ -407,8 +407,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_minSlimeCount: 10
-  m_startingPosition: {x: 0, y: 0, z: 0}
+  m_startingPosition: {x: 0, y: -4.5, z: 0}
+  m_slimeWanderRange: {x: 18, y: 1, z: 0}
   m_slimePrefab: {fileID: 0}
+  m_leftClaw: {fileID: 0}
+  m_rightClaw: {fileID: 0}
 --- !u!114 &540999063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17321,7 +17324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1534023935
