@@ -76,13 +76,16 @@ class UserInputManager : MonoBehaviour
 	{
 		if (!TwitchClient.Instance.Client.IsConnected)
 		{
-			TwitchClient.Instance.Client.Connect();
+			TwitchClient.Instance.ConnectBot();
 		}
 	}
 	public void DisconnectBot()
 	{
-		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], GetParsedMessage(CommandFeedback_BotLeaves));
-		TwitchClient.Instance.Client.Disconnect();
+		if (TwitchClient.Instance.Client.IsConnected)
+		{
+			TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], GetParsedMessage(CommandFeedback_BotLeaves));
+			TwitchClient.Instance.Client.Disconnect();
+		}
 	}
 }
 

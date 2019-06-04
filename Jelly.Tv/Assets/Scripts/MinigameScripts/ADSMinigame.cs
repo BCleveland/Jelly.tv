@@ -89,17 +89,17 @@ public class ADSMinigame : Minigame
 		}
 	}
 
-	private void AttackCommand(object sender, OnChatCommandReceivedArgs e)
+	private void AttackCommand(object sender, OnWhisperCommandReceivedArgs e)
 	{
-		DoCommand(e.Command.ChatMessage.UserId, "Attack");
+		DoCommand(e.Command.WhisperMessage.UserId, "Attack");
 	}
-	private void DefendCommand(object sender, OnChatCommandReceivedArgs e)
+	private void DefendCommand(object sender, OnWhisperCommandReceivedArgs e)
 	{
-		DoCommand(e.Command.ChatMessage.UserId, "Defend");
+		DoCommand(e.Command.WhisperMessage.UserId, "Defend");
 	}
-	private void StealCommand(object sender, OnChatCommandReceivedArgs e)
+	private void StealCommand(object sender, OnWhisperCommandReceivedArgs e)
 	{
-		DoCommand(e.Command.ChatMessage.UserId, "Steal");
+		DoCommand(e.Command.WhisperMessage.UserId, "Steal");
 	}
 	private void DoCommand(string id, string command)
 	{
