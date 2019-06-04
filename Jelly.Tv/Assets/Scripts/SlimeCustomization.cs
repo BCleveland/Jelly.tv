@@ -40,8 +40,8 @@ public class SlimeCustomization : MonoBehaviour
     private string[] m_faceNames;
     private string[] m_shapeNames;
 
-    private Dictionary<TwitchCommand, Sprite> m_faceDictionary = new Dictionary<TwitchCommand, Sprite>();
-    private Dictionary<TwitchCommand, SlimeBody> m_shapeDictionary = new Dictionary<TwitchCommand, SlimeBody>();
+    private Dictionary<string, Sprite> m_faceDictionary = new Dictionary<string, Sprite>();
+    private Dictionary<string, SlimeBody> m_shapeDictionary = new Dictionary<string, SlimeBody>();
 
     private TwitchClient TwitchClient = null;
 
@@ -80,7 +80,7 @@ public class SlimeCustomization : MonoBehaviour
         for (int i = 0; i < m_slimeFaces.Length; i++)
         {
             TwitchCommand command = new TwitchCommand("face", SwapSlimeFaceSprite);
-            m_faceDictionary.Add(command, m_slimeFaces[i]);
+            m_faceDictionary.Add(m_faceNames[i], m_slimeFaces[i]);
             if(TwitchClient != null)
             {
                 TwitchClient.CommandManager.Commands.Add(command);
@@ -90,7 +90,7 @@ public class SlimeCustomization : MonoBehaviour
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
             TwitchCommand command = new TwitchCommand("shape", SwapSlimeShapeSprite);
-            m_shapeDictionary.Add(command, m_slimeShapes[i]);
+            m_shapeDictionary.Add(m_shapeNames[i], m_slimeShapes[i]);
             if (TwitchClient != null)
             {
                 TwitchClient.CommandManager.Commands.Add(command);
@@ -130,11 +130,18 @@ public class SlimeCustomization : MonoBehaviour
                     if (slime.PlayerID == user)
                     {
                         slime.ShapeSpriteRenderer.sprite = m_slimeShapes[i].shapeSprite;
-                        slime.ShapeSpriteRenderer.gameObject.transform.localPosition = m_slimeShapes[i].facePos;
+                        slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_slimeShapes[i].facePos;
                     }
                 }
             }
         }
+    }
+
+    public void SetSlime(string face, string shape, Slime slime)
+    {
+        slime.ShapeSpriteRenderer.sprite = m_shapeDictionary[shape].shapeSprite;
+        slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_shapeDictionary[shape].facePos;
+        slime.FaceSpriteRenderer.sprite = m_faceDictionary[face];
     }
 
     // Update is called once per frame

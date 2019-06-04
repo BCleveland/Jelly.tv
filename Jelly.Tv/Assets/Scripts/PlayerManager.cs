@@ -18,10 +18,15 @@ public class PlayerManager : Singleton<PlayerManager> {
         public string UserName { get => m_userName; set => m_userName = value; }
         public string MiniGameCommand { get => m_miniGameCommand; set => m_miniGameCommand = value; }
         public Slime Slime { get; set; }
+        public string SlimeFace { get; set; }
+        public string SlimeShape { get; set; }
 
-        public Player(string id, int money = 0) {
+        public Player(string id, int money = 0, string face = "basic", string shape = "basic") {
             Id = id;
             Money = money;
+            SlimeFace = face;
+            SlimeShape = shape;
+            FindObjectOfType<SlimeCustomization>().SetSlime(face, shape, Slime);
         }
     }
 
@@ -29,6 +34,8 @@ public class PlayerManager : Singleton<PlayerManager> {
     public class PlayerData {
         public string Id { get; set; }
         public int Money { get; set; }
+        public string SlimeFace { get; set; }
+        public string SlimeShape { get; set; }
     }
 
     private Dictionary<string, Player> m_playerDictionary = new Dictionary<string, Player>();
@@ -43,7 +50,7 @@ public class PlayerManager : Singleton<PlayerManager> {
     public void SavePlayers() {
         List<PlayerData> players = new List<PlayerData>();
         foreach (var p in m_playerDictionary) {
-            players.Add(new PlayerData() { Id = p.Value.Id, Money = p.Value.Money });
+            players.Add(new PlayerData() { Id = p.Value.Id, Money = p.Value.Money, SlimeFace = p.Value.SlimeFace, SlimeShape = p.Value.SlimeShape });
         }
 
         string json = JsonUtility.ToJson(players);
@@ -102,14 +109,14 @@ public class PlayerManager : Singleton<PlayerManager> {
     /// </summary>
     /// <param name="id">The Twitch Id of the player</param>
     /// <returns>Retrns true if the player has been registered and false if the player is already registered.</returns>
-    private bool RegisterPlayer(string id, int money = 0) => m_playerDictionary.AddUnique(id, new Player(id, money));
+    private bool RegisterPlayer(string id, int money = 0, string face = "basic", string shape = "basic") => m_playerDictionary.AddUnique(id, new Player(id, money, face, shape));
 
     private void LoadPlayers() {
         List<PlayerData> players = JsonUtility.FromJson<List<PlayerData>>(PlayerPrefs.GetString("PlayerData"));
         if (players == null) SavePlayers();
         players = JsonUtility.FromJson<List<PlayerData>>(PlayerPrefs.GetString("PlayerData"));
         players.ForEach(p => {
-            RegisterPlayer(p.Id, p.Money);
+            RegisterPlayer(p.Id, p.Money, p.SlimeFace, p.SlimeShape);
         });
     }
 

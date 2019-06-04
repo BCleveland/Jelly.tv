@@ -25,7 +25,6 @@ public class Slime : MonoBehaviour {
     }
     public string PlayerID { get => m_playerID; }
 
-
     void Start() {
         m_stateMachine = new StateMachine<Slime>();
         m_stateMachine.AddState("Soulless", new SoullessState<Slime>(this));

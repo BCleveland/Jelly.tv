@@ -14,9 +14,9 @@ public class ADSMinigame : Minigame
 	{
 		MinigameCommands = new List<TwitchCommand>()
 		{
-			new TwitchCommand("attack", AttackCommand),
-			new TwitchCommand("defend", DefendCommand),
-			new TwitchCommand("steal", StealCommand)
+			new TwitchCommand("attack", AttackCommand, ECommandType.Duel),
+			new TwitchCommand("defend", DefendCommand, ECommandType.Duel),
+			new TwitchCommand("steal", StealCommand, ECommandType.Duel)
 		};
 		m_Players = players;
 		potAmount = PotAmount;
