@@ -33,14 +33,13 @@ public class TwitchClient : Singleton<TwitchClient>
 		Client.OnConnected += ConnectedtoChannel;
 		//client.OnMessageReceived += MyMessageReceivedFunction;
 		Client.OnChatCommandReceived += CommandRecieved;
-
 	}
-
 
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
 	{
-		Client.SendMessage(Client.JoinedChannels[0], "owo jelly boi is here!");
+		Client.SendMessage(Client.JoinedChannels[0], UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_BotEnters));
 	}
+
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
