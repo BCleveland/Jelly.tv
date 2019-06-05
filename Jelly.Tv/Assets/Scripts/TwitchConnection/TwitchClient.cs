@@ -19,28 +19,52 @@ public class TwitchClient : Singleton<TwitchClient>
 
 
 	private void Awake()
-	{
+	{
 		Application.runInBackground = true;
-
-		m_commandManager = new CommandManager();
-
-		//Init bot and tell to join
+		m_commandManager = new CommandManager();
+		Client = new Client();
 		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
-		Client = new Client();
+		Client.Initialize(credidentials, channel_name, '!', '!', false);
+
+
+	}
+
+	public void ConnectBot()
+	{
+		Client = new Client();
+
+		channel_name = UserInputManager.HostChannelName;
+		//Init bot and tell to join
+		ConnectionCredentials credidentials = new ConnectionCredentials("jellybottv", Keys.BotAccessToken);
 		Client.Initialize(credidentials, channel_name, '!', '!', false);
 
-		Client.Connect();
-		Client.OnConnected += ConnectedtoChannel;
-		//client.OnMessageReceived += MyMessageReceivedFunction;
-		Client.OnChatCommandReceived += CommandRecieved;
-
-	}
-
-
+		Client.Connect();
+		Client.OnConnected += ConnectedtoChannel;
+		//client.OnMessageReceived += MyMessageReceivedFunction;
+		Client.OnChatCommandReceived += CommandRecieved;
+		Client.OnWhisperCommandReceived += WhisperCommandRecieved;
+	}
+
+	private void WhisperCommandRecieved(object sender, OnWhisperCommandReceivedArgs e)
+	{
+		Debug.Log(e.Command.WhisperMessage.Username + ": " + e.Command.WhisperMessage.UserId);
+		Client.SendWhisper(e.Command.WhisperMessage.UserId, " Beep boop. Command recieved! " + e.Command.CommandText);
+		for (int i = 0; i < m_commandManager.Commands.Count; i++)
+		{
+			if (m_commandManager.Commands[i].CommandName == e.Command.CommandText)
+			{
+				if (m_commandManager.Commands[i].whisperCommand != null) m_commandManager.Commands[i].whisperCommand.Invoke(sender, e);
+			}
+		}
+		Debug.Log(e.Command.WhisperMessage.Username + ": " + e.Command.WhisperMessage.UserId);
+
+	}
+
 	private void ConnectedtoChannel(object sender, OnConnectedArgs e)
 	{
-		Client.SendMessage(Client.JoinedChannels[0], "owo jelly boi is here!");
+		Client.SendMessage(Client.JoinedChannels[0], UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_BotEnters));
 	}
+
 
 	private void CommandRecieved(object sender, OnChatCommandReceivedArgs e)
 	{
@@ -50,7 +74,7 @@ public class TwitchClient : Singleton<TwitchClient>
 		{
 			if (m_commandManager.Commands[i].CommandName == e.Command.CommandText)
 			{
-				m_commandManager.Commands[i].command.Invoke(sender, e);
+				if (m_commandManager.Commands[i].command != null) m_commandManager.Commands[i].command.Invoke(sender, e);
 			}
 		}
 		Debug.Log(e.Command.ChatMessage.Username + ": " + e.Command.ChatMessage.UserId);
