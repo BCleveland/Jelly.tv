@@ -98,7 +98,7 @@ public class SlimeCustomization : MonoBehaviour
         }
 
         //this is for color
-        TwitchCommand command = new TwitchCommand("color", SwapSlimeShapeSprite);
+        //TwitchCommand command = new TwitchCommand("color", SwapSlimeShapeSprite);
     }
 
     public void SwapSlimeFaceSprite(object sender, OnChatCommandReceivedArgs e)
@@ -161,12 +161,12 @@ public class SlimeCustomization : MonoBehaviour
 
     public void SetSlime(string face, string shape, Slime slime, string color)
     {
-        slime.ShapeSpriteRenderer.sprite = m_shapeDictionary[shape].shapeSprite;
+        /*slime.ShapeSpriteRenderer.sprite = m_shapeDictionary[shape].shapeSprite;
         slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_shapeDictionary[shape].facePos;
         slime.FaceSpriteRenderer.sprite = m_faceDictionary[face];
         Color colorSlime;
         ColorUtility.TryParseHtmlString(color, out colorSlime);
-        slime.ShapeSpriteRenderer.color = colorSlime;
+        slime.ShapeSpriteRenderer.color = colorSlime;*/
     }
 
     // Update is called once per frame

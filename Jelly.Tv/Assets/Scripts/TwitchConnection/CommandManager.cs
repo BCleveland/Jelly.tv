@@ -12,6 +12,7 @@ public class CommandManager
 	public CommandManager()
 	{
 		Commands = new List<TwitchCommand>();
+		AddCommands();
 	}
 
 	private void AddCommands()
@@ -22,11 +23,14 @@ public class CommandManager
 		//register command
 		//info command
 		Commands.Add(new TwitchCommand("info", Command_Info));
-
+		Commands.Add(new TwitchCommand("winfo", WhisperCommand_Info));
 	}
 
 	private void Command_Login(object sender, OnChatCommandReceivedArgs e)
 	{
+		string message = UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_LoginReturning, e);
+
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], message);
 		PlayerManager.Instance.Login(e.Command.ChatMessage.UserId, e.Command.ChatMessage.Username);
 	}
 	private void Command_Screm(object sender, OnChatCommandReceivedArgs e)
@@ -36,9 +40,18 @@ public class CommandManager
 
 	private void Command_Info(object sender, OnChatCommandReceivedArgs e)
 	{
-        TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], "Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!");
+		string message = UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_Info, e);
+		//"Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!"
+		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], message);
 	}
-
+	private void WhisperCommand_Info(object sender, OnWhisperCommandReceivedArgs e)
+	{
+		string message = UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_Info);
+		//"Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!"
+		TwitchClient.Instance.Client.SendWhisper(e.Command.WhisperMessage.Username, message);
+		
+		Debug.Log("whisper command info");
+	}
 	private void Command_ListCommands()
 	{
 		string commands = "Default Commands: + \n";
