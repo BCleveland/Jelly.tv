@@ -7,6 +7,7 @@ public class Lobby : Singleton<Lobby> {
 
     [SerializeField] private int m_minSlimeCount = 0;
     [SerializeField] private Vector3 m_startingPosition;
+    [SerializeField] private Vector3 m_slimeWanderRange;
     [SerializeField] private Slime m_slimePrefab = null;
 
     private SimplePriorityQueue<PlayerManager.Player> m_playerQueue = new SimplePriorityQueue<PlayerManager.Player>();
@@ -15,6 +16,7 @@ public class Lobby : Singleton<Lobby> {
 
 
     public Vector3 StartingPosition { get => m_startingPosition; }
+    public Vector3 WanderRange { get => m_slimeWanderRange; }
 
     public SimplePriorityQueue<PlayerManager.Player> PlayerQueue { get => m_playerQueue; set => m_playerQueue = value; }
 
