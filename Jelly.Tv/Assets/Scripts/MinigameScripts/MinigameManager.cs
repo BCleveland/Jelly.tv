@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Doozy.Engine.Nody;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class MinigameManager : Singleton<MinigameManager>
 	[Tooltip("The multiplier per game the player was in queue")]
 	[SerializeField] private float m_QueueMultiplier = 0.1f;
 	[SerializeField] Claw[] m_Claws = null;
+	[SerializeField] GraphController m_GraphController = null;
 
 	public bool IsInMinigame { get { return m_CurrentMinigame != null; } }
 
@@ -90,6 +92,7 @@ public class MinigameManager : Singleton<MinigameManager>
 				m_Claws[i].MoveAboveDesiredPos(participants[i].Slime, targetPositions[i])));
 		}
 		//TODO: add background transition to activeCoroutines
+		m_GraphController.Graph.SetActiveNodeByName("BattleUI");
 		//wait for finish
 		foreach (var c in activeCoroutines)
 		{
@@ -116,6 +119,7 @@ public class MinigameManager : Singleton<MinigameManager>
 	{
 		//Claws to grab slimes
 		//claws move slimes to random position while background transitions
+		m_GraphController.Graph.SetActiveNodeByName("GameUI");
 		//claws release slimes and leave screen via the top
 		//Other slimes enter somehow?
 		yield return null;

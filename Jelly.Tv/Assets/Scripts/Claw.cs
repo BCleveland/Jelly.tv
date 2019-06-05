@@ -67,11 +67,12 @@ public class Claw : MonoBehaviour {
 			yield return null;
 		}
 		target.State = "Battle";
-		//return back to start position
+		//return back to start position and close
 		Vector3 currentPos = transform.position;
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
 			transform.position = Vector3.Lerp(currentPos, m_startPosition, timer);
+			SetHookAngle(Mathf.Lerp(m_HookOpenAngle, m_HookClosedAngle, timer));
 			yield return null;
 		}
 	}
