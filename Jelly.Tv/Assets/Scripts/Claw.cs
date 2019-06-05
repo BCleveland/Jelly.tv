@@ -11,13 +11,10 @@ public class Claw : MonoBehaviour {
 	[SerializeField] float m_HookClosedAngle = 30.0f;
 	[SerializeField] float m_HookOpenAngle = 90.0f;
 
-	[SerializeField] Slime m_debugTarget = null;
-	private void Update()
+	Vector3 m_startPosition;
+	private void Awake()
 	{
-		if(Input.GetKeyDown(KeyCode.H))
-		{
-			StartCoroutine(Capture(m_debugTarget, transform.position, m_debugTarget.transform.position + Vector3.right*5.0f));
-		}
+		m_startPosition = transform.position;
 	}
 
 	private void SetHookAngle(float angle)
@@ -25,15 +22,14 @@ public class Claw : MonoBehaviour {
 		m_RightHook.rotation = Quaternion.Euler(0, 0, angle);
 		m_LeftHook.rotation = Quaternion.Euler(0, 0, -angle);
 	}
-    private IEnumerator Capture(Slime target, Vector3 startPos, Vector3 desiredPos)
+	public IEnumerator MoveToAndGrabSlime(Slime target)
 	{
 		SetHookAngle(m_HookOpenAngle);
 		Vector3 slimePos = target.transform.position - m_GrabPosition.localPosition;
-		desiredPos -= m_GrabPosition.localPosition;
-        //Move to target
-		for(float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime*m_moveSpeed)
+		//Move to target
+		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
-			transform.position = Vector3.Lerp(startPos, slimePos, timer);
+			transform.position = Vector3.Lerp(m_startPosition, slimePos, timer);
 			yield return null;
 		}
 		//Animation to grab slime here
@@ -44,19 +40,26 @@ public class Claw : MonoBehaviour {
 			SetHookAngle(Mathf.Lerp(m_HookOpenAngle, m_HookClosedAngle, timer));
 			yield return null;
 		}
-		//Move to hold position;
-		Vector3 desiredYPos = slimePos;
-		desiredYPos.y = desiredPos.y;
+	}
+	public IEnumerator MoveAboveDesiredPos(Slime target, Vector3 desiredPos)
+	{
+		Vector3 currentPos = transform.position;
+		Vector3 upPos = currentPos;
+		upPos.y = m_startPosition.y;
+		desiredPos.y = m_startPosition.y;
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
-			transform.position = Vector3.Lerp(slimePos, desiredYPos, timer);
+			transform.position = Vector3.Lerp(currentPos, upPos, timer);
 			yield return null;
 		}
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
-			transform.position = Vector3.Lerp(desiredYPos, desiredPos, timer);
+			transform.position = Vector3.Lerp(upPos, desiredPos, timer);
 			yield return null;
 		}
+	}
+	public IEnumerator DropAndMoveBack(Slime target)
+	{
 		//Release target
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
@@ -64,11 +67,12 @@ public class Claw : MonoBehaviour {
 			yield return null;
 		}
 		target.State = "Battle";
-		//return
+		//return back to start position
+		Vector3 currentPos = transform.position;
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
-			transform.position = Vector3.Lerp(desiredPos, startPos, timer);
+			transform.position = Vector3.Lerp(currentPos, m_startPosition, timer);
 			yield return null;
 		}
-    }
+	}
 }
