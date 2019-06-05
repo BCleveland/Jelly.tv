@@ -98,7 +98,7 @@ public class SlimeCustomization : MonoBehaviour
         }
 
         //this is for color
-        TwitchCommand command = new TwitchCommand("color", SwapSlimeShapeSprite);
+        //TwitchCommand command = new TwitchCommand("color", SwapSlimeShapeSprite);
     }
 
     public void SwapSlimeFaceSprite(object sender, OnChatCommandReceivedArgs e)
