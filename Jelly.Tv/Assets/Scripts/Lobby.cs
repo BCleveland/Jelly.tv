@@ -8,8 +8,6 @@ public class Lobby : Singleton<Lobby> {
     [SerializeField] private int m_minSlimeCount = 0;
     [SerializeField] private Vector3 m_startingPosition;
     [SerializeField] private Slime m_slimePrefab = null;
-    [SerializeField] private Claw m_leftClaw = null;
-    [SerializeField] private Claw m_rightClaw = null;
 
     private SimplePriorityQueue<PlayerManager.Player> m_playerQueue = new SimplePriorityQueue<PlayerManager.Player>();
 
