@@ -28,7 +28,6 @@ public class PlayerManager : Singleton<PlayerManager> {
             SlimeFace = face;
             SlimeShape = shape;
             SlimeColor = slimeColor;
-            FindObjectOfType<SlimeCustomization>().SetSlime(face, shape, Slime, slimeColor);
         }
     }
 
@@ -74,8 +73,10 @@ public class PlayerManager : Singleton<PlayerManager> {
         m_playerDictionary[id].UserName = userName;
         Slime slime = Lobby.Instance.GetSoullessSlime();
         if (slime) {
-            slime.SetPlayer(m_playerDictionary[id]);
+            Player player = m_playerDictionary[id];
+            slime.SetPlayer(player);
             m_playerDictionary[id].Slime = slime;
+            FindObjectOfType<SlimeCustomization>().SetSlime(player.SlimeFace, player.SlimeShape, slime, player.SlimeColor);
         }
         Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id], 0.0f);
     }
