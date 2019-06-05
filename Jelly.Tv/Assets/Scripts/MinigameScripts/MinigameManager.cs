@@ -70,8 +70,8 @@ public class MinigameManager : Singleton<MinigameManager>
 		//Claws to grab slimes
 		Vector3[] targetPositions = new Vector3[]
 		{
-			new Vector3(-5, 0, 0),
-			new Vector3(5, 0, 0)
+			new Vector3(-5, -4.5f, 0),
+			new Vector3(5, -4.5f, 0)
 		};
 		List<Coroutine> activeCoroutines = new List<Coroutine>();
 		for(int i = 0; i < participants.Count; i++)
@@ -91,7 +91,6 @@ public class MinigameManager : Singleton<MinigameManager>
 			activeCoroutines.Add(StartCoroutine(
 				m_Claws[i].MoveAboveDesiredPos(participants[i].Slime, targetPositions[i])));
 		}
-		//TODO: add background transition to activeCoroutines
 		m_GraphController.Graph.SetActiveNodeByName("BattleUI");
 		//wait for finish
 		foreach (var c in activeCoroutines)
@@ -118,11 +117,42 @@ public class MinigameManager : Singleton<MinigameManager>
 	private IEnumerator ReturnToLobbyTransition(MinigameResult result)
 	{
 		//Claws to grab slimes
+		List<Coroutine> activeCoroutines = new List<Coroutine>();
+		for (int i = 0; i < result.Participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(m_Claws[i].MoveToAndGrabSlime(result.Participants[i].Slime)));
+		}
+		//wait for finish
+		foreach (var c in activeCoroutines)
+		{
+			yield return c;
+		}
+		activeCoroutines.Clear();
 		//claws move slimes to random position while background transitions
+		for (int i = 0; i < result.Participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(
+				m_Claws[i].MoveAboveDesiredPos(result.Participants[i].Slime, new Vector3(0, -4.5f, 0))));
+		}
 		m_GraphController.Graph.SetActiveNodeByName("GameUI");
-		//claws release slimes and leave screen via the top
+		//wait for finish
+		foreach (var c in activeCoroutines)
+		{
+			yield return c;
+		}
+		activeCoroutines.Clear();
+		//drop slimes and return
+		for (int i = 0; i < result.Participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(
+				m_Claws[i].DropAndMoveBack(result.Participants[i].Slime)));
+		}
+		//wait for finish
+		foreach (var c in activeCoroutines)
+		{
+			yield return c;
+		}
 		//Other slimes enter somehow?
-		yield return null;
 	}
 	private IEnumerator ADSMinigameResult(MinigameResult result)
 	{

@@ -31,5 +31,6 @@ public class MinigameResult
 	public string CoroutineToPlay;
 	public Dictionary<string, PlayerOutcome> UserResults = new Dictionary<string, PlayerOutcome>();
 	public Dictionary<string, int> UserEarnings = new Dictionary<string, int>();
+	public List<PlayerManager.Player> Participants;
 }
 public enum PlayerOutcome { Won, Lost, Tie }

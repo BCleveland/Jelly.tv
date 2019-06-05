@@ -33,7 +33,7 @@ public class ADSMinigame : Minigame
 		}[(int)Commands.ADSCommandDict[m_Players[1].MiniGameCommand]]
 		 [(int)Commands.ADSCommandDict[m_Players[0].MiniGameCommand]];
 
-		MinigameResult output = new MinigameResult() { CoroutineToPlay = "ADSResult" };
+		MinigameResult output = new MinigameResult() { CoroutineToPlay = "ADSMinigameResult" };
 
 		if (result == "tie")
 		{
@@ -70,6 +70,7 @@ public class ADSMinigame : Minigame
 			output.UserEarnings.Add(loser.Id, participationMoney);
 		}
 		DishOutEarnings(m_Players, output);
+		output.Participants = m_Players;
 		return output;
 	}
 
