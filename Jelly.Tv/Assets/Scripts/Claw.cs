@@ -7,16 +7,29 @@ public class Claw : MonoBehaviour {
     [SerializeField] float m_moveSpeed = 10.0f;
 	[SerializeField] Transform m_LeftHook = null;
 	[SerializeField] Transform m_RightHook = null;
+	[SerializeField] public Transform m_GrabPosition = null;
 	[SerializeField] float m_HookClosedAngle = 30.0f;
 	[SerializeField] float m_HookOpenAngle = 90.0f;
 
+	[SerializeField] Slime m_debugTarget = null;
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.H))
+		{
+			StartCoroutine(Capture(m_debugTarget, transform.position, m_debugTarget.transform.position + Vector3.right*5.0f));
+		}
+	}
+
 	private void SetHookAngle(float angle)
 	{
-		
+		m_RightHook.rotation = Quaternion.Euler(0, 0, angle);
+		m_LeftHook.rotation = Quaternion.Euler(0, 0, -angle);
 	}
     private IEnumerator Capture(Slime target, Vector3 startPos, Vector3 desiredPos)
 	{
-		Vector3 slimePos = target.transform.position;
+		SetHookAngle(m_HookOpenAngle);
+		Vector3 slimePos = target.transform.position - m_GrabPosition.localPosition;
+		desiredPos -= m_GrabPosition.localPosition;
         //Move to target
 		for(float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime*m_moveSpeed)
 		{
@@ -25,6 +38,7 @@ public class Claw : MonoBehaviour {
 		}
 		//Animation to grab slime here
 		target.State = "Claw";
+		target.Claw = this;
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
 			SetHookAngle(Mathf.Lerp(m_HookOpenAngle, m_HookClosedAngle, timer));

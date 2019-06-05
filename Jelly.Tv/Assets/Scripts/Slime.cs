@@ -105,7 +105,7 @@ class ClawState<T> : State<T> where T : Slime {
     public override void Enter() { }
     public override void Update() {
         // Change to move to a set offset from the claw's transform
-        if (Owner.Claw) Owner.transform.position = Owner.Claw.transform.position;
+        if (Owner.Claw) Owner.transform.position = Owner.Claw.m_GrabPosition.position;
     }
 
     public override void Exit() {
