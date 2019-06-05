@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Doozy.Engine.Nody;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class MinigameManager : Singleton<MinigameManager>
 	[SerializeField] private int m_WinMoney = 500;
 	[Tooltip("The multiplier per game the player was in queue")]
 	[SerializeField] private float m_QueueMultiplier = 0.1f;
+	[SerializeField] Claw[] m_Claws = null;
+	[SerializeField] GraphController m_GraphController = null;
 
 	public bool IsInMinigame { get { return m_CurrentMinigame != null; } }
 
@@ -64,18 +67,59 @@ public class MinigameManager : Singleton<MinigameManager>
 	}
 	private IEnumerator MinigameTransition(List<PlayerManager.Player> participants)
 	{
-		participants[0].Slime.State = "Soulless";
 		//Claws to grab slimes
+		Vector3[] targetPositions = new Vector3[]
+		{
+			new Vector3(-5, 0, 0),
+			new Vector3(5, 0, 0)
+		};
+		List<Coroutine> activeCoroutines = new List<Coroutine>();
+		for(int i = 0; i < participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(m_Claws[i].MoveToAndGrabSlime(participants[i].Slime)));
+		}
+		//wait for finish
+		foreach(var c in activeCoroutines)
+		{
+			yield return c;
+		}
+
 		//Claws move slime to desired position while background transitions
-		//claws release slimes and leave screen via the top
-		//Minigame visuals appear
-		yield return null;
+		activeCoroutines.Clear();
+		for(int i = 0; i < participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(
+				m_Claws[i].MoveAboveDesiredPos(participants[i].Slime, targetPositions[i])));
+		}
+		//TODO: add background transition to activeCoroutines
+		m_GraphController.Graph.SetActiveNodeByName("BattleUI");
+		//wait for finish
+		foreach (var c in activeCoroutines)
+		{
+			yield return c;
+		}
+
+		//claws release slimes and leave screen via the side
+		activeCoroutines.Clear();
+		for (int i = 0; i < participants.Count; i++)
+		{
+			activeCoroutines.Add(StartCoroutine(
+				m_Claws[i].DropAndMoveBack(participants[i].Slime)));
+		}
+		//wait for finish
+		foreach (var c in activeCoroutines)
+		{
+			yield return c;
+		}
+		//TODO: Minigame visuals appear
+
 		StartMinigame(participants);
 	}
 	private IEnumerator ReturnToLobbyTransition(MinigameResult result)
 	{
 		//Claws to grab slimes
 		//claws move slimes to random position while background transitions
+		m_GraphController.Graph.SetActiveNodeByName("GameUI");
 		//claws release slimes and leave screen via the top
 		//Other slimes enter somehow?
 		yield return null;

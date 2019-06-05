@@ -65,9 +65,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 113331559
+  m_SortingLayer: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0f3c90ff41ab1484b8ccfa8ed8242630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,9 +144,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 113331559
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8fa58de33ecb0424580e123da0b7071d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -297,12 +297,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29594745236705946bf0c88b5285a89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 10
+  m_moveSpeed: 1
   m_LeftHook: {fileID: 5435123552517419489}
   m_RightHook: {fileID: 1484383168015846489}
+  m_GrabPosition: {fileID: 8852589588237209945}
   m_HookClosedAngle: -10
   m_HookOpenAngle: 20
-  m_debugTarget: {fileID: 0}
 --- !u!1 &8574433759622433332
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,9 +368,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 113331559
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8fa58de33ecb0424580e123da0b7071d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
