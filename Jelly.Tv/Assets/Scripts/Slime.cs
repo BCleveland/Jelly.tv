@@ -34,7 +34,7 @@ public class Slime : MonoBehaviour {
         m_stateMachine.AddState("Wander", new WanderState<Slime>(this));
         m_stateMachine.AddState("Battle", new BattleState<Slime>(this));
         m_stateMachine.AddState("Claw", new ClawState<Slime>(this));
-        m_stateMachine.AddState("Flee", new ClawState<Slime>(this));
+        m_stateMachine.AddState("Flee", new FleeState<Slime>(this));
         State = "Wander";
     }
 
@@ -96,10 +96,13 @@ class BattleState<T> : State<T> where T : Slime {
 
     public override void Enter() { }
     public override void Update() {
+		Vector3 pos = Owner.transform.position + 
+			(Vector3.down * 5.0f * Time.deltaTime);
+		pos.y = Mathf.Max(pos.y, -4.5f);
+		Owner.transform.position = pos;
+	}
 
-    }
-
-    public override void Exit() { }
+	public override void Exit() { }
 
 }
 
@@ -134,7 +137,7 @@ class FleeState<T> : State<T> where T : Slime {
     }
 
     public override void Update() {
-        m_lerpAlpha += (Owner.SlimeSpeed / m_startDistance) * Time.deltaTime;
+        m_lerpAlpha += (Owner.SlimeSpeed*5 / m_startDistance) * Time.deltaTime;
         Owner.transform.position = Vector3.Lerp(Owner.transform.position, m_fleeLocation, m_lerpAlpha);
     }
 

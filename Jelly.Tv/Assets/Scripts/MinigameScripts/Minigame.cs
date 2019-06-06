@@ -21,7 +21,6 @@ public abstract class Minigame
 		foreach(var player in players)
 		{
 			player.Money += result.UserEarnings[player.Id];
-			player.MiniGameCommand = "";
 		}
 	}
 }

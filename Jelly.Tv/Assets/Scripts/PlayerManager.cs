@@ -80,6 +80,7 @@ public class PlayerManager : Singleton<PlayerManager> {
             Player player = m_playerDictionary[id];
             slime.SetPlayer(player);
             m_playerDictionary[id].Slime = slime;
+			slime.TextDisplay.text = m_playerDictionary[id].UserName;
             FindObjectOfType<SlimeCustomization>().SetSlime(player.SlimeFace, player.SlimeShape, slime, player.SlimeColor);
         }
         Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id], 0.0f);

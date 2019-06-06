@@ -108,6 +108,7 @@ public class ADSMinigame : Minigame
 		if (player.MiniGameCommand == "" || player.MiniGameCommand == null)
 		{
 			player.MiniGameCommand = command;
+			player.Slime.TextDisplay.text = "Ready!";
 		}
 		//check if all
 		if(m_Players.FindAll(p => p.MiniGameCommand == "" || p.MiniGameCommand == null).Count == 0)
