@@ -80,22 +80,17 @@ public class SlimeCustomization : MonoBehaviour
         for (int i = 0; i < m_slimeFaces.Length; i++)
         {
             m_faceDictionary.Add(m_faceNames[i], m_slimeFaces[i]);
-            TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
-            if(TwitchClient != null)
-            {
-                TwitchClient.CommandManager.Commands.Add(faceCommand);
-            }
         }
 
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
-            TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
             m_shapeDictionary.Add(m_shapeNames[i], m_slimeShapes[i]);
-            if (TwitchClient != null)
-            {
-                TwitchClient.CommandManager.Commands.Add(shapeCommand);
-            }
         }
+
+        TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
+        TwitchClient.CommandManager.Commands.Add(faceCommand);
+        TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
+        TwitchClient.CommandManager.Commands.Add(shapeCommand);
 
         //this is for color
         TwitchCommand colorCommand = new TwitchCommand("color", ChangeSlimeShapeColor);
