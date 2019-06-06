@@ -68,8 +68,8 @@ class UserInputManager : MonoBehaviour
 
 	public static string GetParsedMessage(string message, OnChatCommandReceivedArgs e = null)
 	{
-		if (e != null) message.Replace("$USER$", e.Command.ChatMessage.Username);
-		message.Replace("$CHANNEL$", UserInputManager.HostChannelName);
+		if (e != null) message = message.Replace("$USER$", e.Command.ChatMessage.Username);
+		message = message.Replace("$CHANNEL$", UserInputManager.HostChannelName);
 		return message;
 	}
 	public void ReconnectBot()

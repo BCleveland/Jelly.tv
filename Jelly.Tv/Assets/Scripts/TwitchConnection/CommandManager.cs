@@ -24,6 +24,7 @@ public class CommandManager
 		//info command
 		Commands.Add(new TwitchCommand("info", Command_Info));
 		Commands.Add(new TwitchCommand("winfo", WhisperCommand_Info));
+		Commands.Add(new TwitchCommand("commands", Command_ListCommands));
 	}
 
 	private void Command_Login(object sender, OnChatCommandReceivedArgs e)
@@ -52,9 +53,9 @@ public class CommandManager
 		
 		Debug.Log("whisper command info");
 	}
-	private void Command_ListCommands()
+	private void Command_ListCommands(object sender, OnChatCommandReceivedArgs e)
 	{
-		string commands = "Default Commands: + \n";
+		string commands = "Default Commands: \n";
 
 		foreach (var item in GetAllCommandsofType(ECommandType.Default))
 		{
