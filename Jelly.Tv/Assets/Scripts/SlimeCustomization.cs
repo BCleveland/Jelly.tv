@@ -79,27 +79,40 @@ public class SlimeCustomization : MonoBehaviour
     {
         for (int i = 0; i < m_slimeFaces.Length; i++)
         {
-            TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
             m_faceDictionary.Add(m_faceNames[i], m_slimeFaces[i]);
-            if(TwitchClient != null)
-            {
-                TwitchClient.CommandManager.Commands.Add(faceCommand);
-            }
         }
 
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
-            TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
             m_shapeDictionary.Add(m_shapeNames[i], m_slimeShapes[i]);
-            if (TwitchClient != null)
-            {
-                TwitchClient.CommandManager.Commands.Add(shapeCommand);
-            }
         }
+
+        TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
+        TwitchClient.CommandManager.Commands.Add(faceCommand);
+        TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
+        TwitchClient.CommandManager.Commands.Add(shapeCommand);
 
         //this is for color
         TwitchCommand colorCommand = new TwitchCommand("color", ChangeSlimeShapeColor);
         TwitchClient.CommandManager.Commands.Add(colorCommand);
+
+        TwitchCommand shapeInfoCommand = new TwitchCommand("infoshape", ChangeSlimeShapeColor);
+        TwitchClient.CommandManager.Commands.Add(shapeInfoCommand);
+
+        TwitchCommand faceInfoCommand = new TwitchCommand("infoface", ChangeSlimeShapeColor);
+        TwitchClient.CommandManager.Commands.Add(faceInfoCommand);
+    }
+
+    public void ShapeInfo(object sender, OnChatCommandReceivedArgs e)
+    {
+        TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], 
+            "Slime Shape Commands(use !shape [shape]): basic, big, round, square, tall");
+    }
+
+    public void FaceInfo(object sender, OnChatCommandReceivedArgs e)
+    {
+        TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0],
+            "Slime Face Commands(use !face [face]): basic, baby, bastard, kissy, nya, sad, sleepy, smug");
     }
 
     public void SwapSlimeFaceSprite(object sender, OnChatCommandReceivedArgs e)
