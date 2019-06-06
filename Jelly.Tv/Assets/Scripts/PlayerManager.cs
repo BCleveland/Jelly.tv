@@ -59,6 +59,10 @@ public class PlayerManager : Singleton<PlayerManager> {
         PlayerPrefs.SetString("PlayerData", json);
     }
 
+    private void OnApplicationQuit() {
+        SavePlayers();
+    }
+
     /// <summary>
     /// Adds a player to the active player list if they're not already in it.
     /// </summary>
@@ -79,6 +83,7 @@ public class PlayerManager : Singleton<PlayerManager> {
             FindObjectOfType<SlimeCustomization>().SetSlime(player.SlimeFace, player.SlimeShape, slime, player.SlimeColor);
         }
         Lobby.Instance.PlayerQueue.Enqueue(m_playerDictionary[id], 0.0f);
+        SavePlayers();
     }
 
     public void Logout(string id) {
@@ -86,6 +91,7 @@ public class PlayerManager : Singleton<PlayerManager> {
             m_activePlayers.Remove(m_playerDictionary[id]);
             Lobby.Instance.Logout(m_playerDictionary[id]);
         }
+        SavePlayers();
     }
 
 
