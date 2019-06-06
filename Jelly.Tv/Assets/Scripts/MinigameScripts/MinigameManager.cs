@@ -49,6 +49,7 @@ public class MinigameManager : Singleton<MinigameManager>
 		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], "Starting Minigame!" + 
 			victoryAmount);
 		RegisterCommands();
+		participants.ForEach(p => p.Slime.TextDisplay.text = "Waiting for Command...");
 	}
 	public void MinigameOver(MinigameResult result)
 	{
@@ -67,11 +68,12 @@ public class MinigameManager : Singleton<MinigameManager>
 	}
 	private IEnumerator MinigameTransition(List<PlayerManager.Player> participants)
 	{
+		SetAllSlimesToState("Flee");
 		//Claws to grab slimes
 		Vector3[] targetPositions = new Vector3[]
 		{
-			new Vector3(-5, -4.5f, 0),
-			new Vector3(5, -4.5f, 0)
+			new Vector3(-3, -4.5f, 0),
+			new Vector3(3, -4.5f, 0)
 		};
 		List<Coroutine> activeCoroutines = new List<Coroutine>();
 		for(int i = 0; i < participants.Count; i++)
@@ -116,6 +118,11 @@ public class MinigameManager : Singleton<MinigameManager>
 	}
 	private IEnumerator ReturnToLobbyTransition(MinigameResult result)
 	{
+		Vector3[] targetPositions = new Vector3[]
+{
+			new Vector3(-5, -4.5f, 0),
+			new Vector3(5, -4.5f, 0)
+};
 		//Claws to grab slimes
 		List<Coroutine> activeCoroutines = new List<Coroutine>();
 		for (int i = 0; i < result.Participants.Count; i++)
@@ -132,7 +139,7 @@ public class MinigameManager : Singleton<MinigameManager>
 		for (int i = 0; i < result.Participants.Count; i++)
 		{
 			activeCoroutines.Add(StartCoroutine(
-				m_Claws[i].MoveAboveDesiredPos(result.Participants[i].Slime, new Vector3(0, -4.5f, 0))));
+				m_Claws[i].MoveAboveDesiredPos(result.Participants[i].Slime, targetPositions[i])));
 		}
 		m_GraphController.Graph.SetActiveNodeByName("GameUI");
 		//wait for finish
@@ -152,14 +159,48 @@ public class MinigameManager : Singleton<MinigameManager>
 		{
 			yield return c;
 		}
-		//Other slimes enter somehow?
+		SetAllSlimesToState("Wander");
+		result.Participants.ForEach(p => p.Slime.TextDisplay.text = p.UserName);
 	}
 	private IEnumerator ADSMinigameResult(MinigameResult result)
 	{
 		//Slimes both do their animation
+		foreach (PlayerManager.Player player in result.Participants)
+		{
+			player.Slime.TextDisplay.text = player.MiniGameCommand;
+			switch (player.MiniGameCommand)
+			{
+				case "attack":
+					break;
+				case "defend":
+					break;
+				case "steal":
+					break;
+			}
+		}
+		yield return new WaitForSeconds(1.0f);
 		//React accordingly to win/loss
+		foreach (PlayerManager.Player player in result.Participants)
+		{
+			player.Slime.TextDisplay.text = result.UserResults[player.Id].ToString();
+			switch(result.UserResults[player.Id])
+			{
+				case PlayerOutcome.Won:
+					break;
+				case PlayerOutcome.Lost:
+					break;
+				case PlayerOutcome.Tie:
+					break;
+			}
+		}
+		yield return new WaitForSeconds(1.0f);
+		result.Participants.ForEach(p => p.MiniGameCommand = "");
 		//display earned money count
-		yield return null;
+		foreach(PlayerManager.Player player in result.Participants)
+		{
+			player.Slime.TextDisplay.text = "$" + result.UserEarnings[player.Id];
+		}
+		yield return new WaitForSeconds(2.0f);
 		StartCoroutine(ReturnToLobbyTransition(result));
 	}
 
@@ -172,5 +213,12 @@ public class MinigameManager : Singleton<MinigameManager>
 	{
 		var commandList = TwitchClient.Instance.CommandManager.Commands;
 		m_CurrentMinigame.UnregisterCommands(commandList);
+	}
+	private void SetAllSlimesToState(string state)
+	{
+		foreach(var player in PlayerManager.Instance.PlayerDictioary.Values)
+		{
+			player.Slime.State = state;
+		}
 	}
 }
