@@ -89,6 +89,7 @@ public class SlimeCustomization : MonoBehaviour
 
         TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
         TwitchClient.CommandManager.Commands.Add(faceCommand);
+
         TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
         TwitchClient.CommandManager.Commands.Add(shapeCommand);
 
