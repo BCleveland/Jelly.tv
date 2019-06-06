@@ -152,12 +152,38 @@ public class MinigameManager : Singleton<MinigameManager>
 		{
 			yield return c;
 		}
+		result.Participants.ForEach(p => p.Slime.State = "Wander");
 		//Other slimes enter somehow?
 	}
 	private IEnumerator ADSMinigameResult(MinigameResult result)
 	{
 		//Slimes both do their animation
+		foreach (PlayerManager.Player player in result.Participants)
+		{
+			switch (player.MiniGameCommand)
+			{
+				case "attack":
+					break;
+				case "defend":
+					break;
+				case "steal":
+					break;
+			}
+		}
+
 		//React accordingly to win/loss
+		foreach (PlayerManager.Player player in result.Participants)
+		{
+			switch(result.UserResults[player.Id])
+			{
+				case PlayerOutcome.Won:
+					break;
+				case PlayerOutcome.Lost:
+					break;
+				case PlayerOutcome.Tie:
+					break;
+			}
+		}
 		//display earned money count
 		yield return null;
 		StartCoroutine(ReturnToLobbyTransition(result));
