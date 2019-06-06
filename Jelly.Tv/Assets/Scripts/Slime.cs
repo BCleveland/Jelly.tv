@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Slime : MonoBehaviour {
@@ -10,6 +11,7 @@ public class Slime : MonoBehaviour {
     public SpriteRenderer ShapeSpriteRenderer;
 
     [SerializeField] private float m_slimeSpeed = 1.0f;
+    [SerializeField] private TextMeshPro m_textDisplay = null;
 
     private string m_playerID = "";
     private string m_state = "";
@@ -18,6 +20,7 @@ public class Slime : MonoBehaviour {
 
     public float SlimeSpeed { get => m_slimeSpeed; }
     public Claw Claw { get => m_claw; set => m_claw = value; }
+    public TextMeshPro TextDisplay { get => m_textDisplay; set => m_textDisplay = value; }
 
     public string State {
         get => m_state;
@@ -31,6 +34,7 @@ public class Slime : MonoBehaviour {
         m_stateMachine.AddState("Wander", new WanderState<Slime>(this));
         m_stateMachine.AddState("Battle", new BattleState<Slime>(this));
         m_stateMachine.AddState("Claw", new ClawState<Slime>(this));
+        m_stateMachine.AddState("Flee", new ClawState<Slime>(this));
         State = "Wander";
     }
 
@@ -67,7 +71,8 @@ class WanderState<T> : State<T> where T : Slime {
 
     public override void Enter() { }
     public override void Update() {
-        if (Owner.transform.position == m_newLocation) {
+        float tolerance = 0.0001f;
+        if (Vector3.Distance(Owner.transform.position, m_newLocation) < tolerance) {
             float newX = Random.Range(Lobby.Instance.StartingPosition.x - (Lobby.Instance.WanderRange.x * 0.5f), Lobby.Instance.StartingPosition.x + (Lobby.Instance.WanderRange.x * 0.5f));
             float newY = Random.Range(Lobby.Instance.StartingPosition.y - (Lobby.Instance.WanderRange.y * 0.5f), Lobby.Instance.StartingPosition.y + (Lobby.Instance.WanderRange.y * 0.5f));
             m_newLocation = new Vector3(newX, newY, 0.0f);
@@ -110,6 +115,31 @@ class ClawState<T> : State<T> where T : Slime {
 
     public override void Exit() {
         Owner.Claw = null;
+    }
+
+}
+
+class FleeState<T> : State<T> where T : Slime {
+    private Vector3 m_fleeLocation;
+    private float m_startDistance;
+    private float m_lerpAlpha;
+
+    public FleeState(T owner) : base(owner) { }
+
+    public override void Enter() {
+        m_fleeLocation = Lobby.Instance.FleeLocations[Random.Range(0, Lobby.Instance.FleeLocations.Count)];
+        m_lerpAlpha = 0.0f;
+        float dist = Vector3.Distance(Owner.transform.position, m_fleeLocation);
+        m_startDistance = dist == 0.0f ? 0.01f : dist;
+    }
+
+    public override void Update() {
+        m_lerpAlpha += (Owner.SlimeSpeed / m_startDistance) * Time.deltaTime;
+        Owner.transform.position = Vector3.Lerp(Owner.transform.position, m_fleeLocation, m_lerpAlpha);
+    }
+
+    public override void Exit() {
+        
     }
 
 }
