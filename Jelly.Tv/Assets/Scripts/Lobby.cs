@@ -1,4 +1,5 @@
-﻿using Priority_Queue;
+﻿using Doozy.Engine.Nody;
+using Priority_Queue;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,6 @@ public class Lobby : Singleton<Lobby> {
     [SerializeField] private Vector3 m_startingPosition;
     [SerializeField] private Vector3 m_slimeWanderRange;
     [SerializeField] private Slime m_slimePrefab = null;
-    [SerializeField] private Claw m_leftClaw = null;
-    [SerializeField] private Claw m_rightClaw = null;
 
     private SimplePriorityQueue<PlayerManager.Player> m_playerQueue = new SimplePriorityQueue<PlayerManager.Player>();
 

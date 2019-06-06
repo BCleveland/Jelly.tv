@@ -70,7 +70,7 @@ public class SlimeCustomization : MonoBehaviour
         m_shapeNames = new string[m_slimeShapes.Length];
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
-            string shapeType = m_slimeShapes[i].shapeSprite.name.Replace("slime_face_", "");
+            string shapeType = m_slimeShapes[i].shapeSprite.name.Replace("slime_shape_", "");
             m_shapeNames[i] = shapeType;
         }
     }
@@ -79,26 +79,27 @@ public class SlimeCustomization : MonoBehaviour
     {
         for (int i = 0; i < m_slimeFaces.Length; i++)
         {
-            TwitchCommand command = new TwitchCommand("face", SwapSlimeFaceSprite);
+            TwitchCommand faceCommand = new TwitchCommand("face", SwapSlimeFaceSprite);
             m_faceDictionary.Add(m_faceNames[i], m_slimeFaces[i]);
             if(TwitchClient != null)
             {
-                TwitchClient.CommandManager.Commands.Add(command);
+                TwitchClient.CommandManager.Commands.Add(faceCommand);
             }
         }
 
         for (int i = 0; i < m_slimeShapes.Length; i++)
         {
-            TwitchCommand command = new TwitchCommand("shape", SwapSlimeShapeSprite);
+            TwitchCommand shapeCommand = new TwitchCommand("shape", SwapSlimeShapeSprite);
             m_shapeDictionary.Add(m_shapeNames[i], m_slimeShapes[i]);
             if (TwitchClient != null)
             {
-                TwitchClient.CommandManager.Commands.Add(command);
+                TwitchClient.CommandManager.Commands.Add(shapeCommand);
             }
         }
 
         //this is for color
-        TwitchCommand command = new TwitchCommand("color", SwapSlimeShapeSprite);
+        TwitchCommand colorCommand = new TwitchCommand("color", ChangeSlimeShapeColor);
+        TwitchClient.CommandManager.Commands.Add(colorCommand);
     }
 
     public void SwapSlimeFaceSprite(object sender, OnChatCommandReceivedArgs e)
@@ -109,35 +110,32 @@ public class SlimeCustomization : MonoBehaviour
         {
             if (faceTypeInput == m_faceNames[i])
             {
-                foreach (Slime slime in FindObjectsOfType<Slime>())
-                {
-                    if(slime.PlayerID == user)
-                    {
-                        slime.FaceSpriteRenderer.sprite = m_slimeFaces[i];
-                    }
-                }
+                PlayerManager.Player player = PlayerManager.Instance.PlayerDictioary[user];
+                Slime slime = player.Slime;
+               
+                slime.FaceSpriteRenderer.sprite = m_slimeFaces[i];
+                player.SlimeFace = faceTypeInput;
             }
         }
+        PlayerManager.Instance.SavePlayers();
     }
 
     public void SwapSlimeShapeSprite(object sender, OnChatCommandReceivedArgs e)
     {
         string user = e.Command.ChatMessage.UserId;
         string shapeTypeInput = e.Command.ArgumentsAsString;
-        for (int i = 0; i < m_faceNames.Length; i++)
+        for (int i = 0; i < m_shapeNames.Length; i++)
         {
-            if (shapeTypeInput == m_faceNames[i])
+            if (shapeTypeInput == m_shapeNames[i])
             {
-                foreach (Slime slime in FindObjectsOfType<Slime>())
-                {
-                    if (slime.PlayerID == user)
-                    {
-                        slime.ShapeSpriteRenderer.sprite = m_slimeShapes[i].shapeSprite;
-                        slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_slimeShapes[i].facePos;
-                    }
-                }
+                PlayerManager.Player player = PlayerManager.Instance.PlayerDictioary[user];
+                Slime slime = player.Slime;
+                slime.ShapeSpriteRenderer.sprite = m_slimeShapes[i].shapeSprite;
+                slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_slimeShapes[i].facePos;
+                player.SlimeShape = shapeTypeInput;
             }
         }
+        PlayerManager.Instance.SavePlayers();
     }
 
     public void ChangeSlimeShapeColor(object sender, OnChatCommandReceivedArgs e)
@@ -149,21 +147,23 @@ public class SlimeCustomization : MonoBehaviour
 
         if(slimeColor != null)
         {
-            foreach (Slime slime in FindObjectsOfType<Slime>())
-            {
-                if (slime.PlayerID == user)
-                {
-                    slime.ShapeSpriteRenderer.color = slimeColor;
-                }
-            }
+            PlayerManager.Player player = PlayerManager.Instance.PlayerDictioary[user];
+            Slime slime = player.Slime;
+            slime.ShapeSpriteRenderer.color = slimeColor;
+            player.SlimeColor = colorInput;
         }
+
+        PlayerManager.Instance.SavePlayers();
     }
 
     public void SetSlime(string face, string shape, Slime slime, string color)
     {
-        slime.ShapeSpriteRenderer.sprite = m_shapeDictionary[shape].shapeSprite;
-        slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_shapeDictionary[shape].facePos;
-        slime.FaceSpriteRenderer.sprite = m_faceDictionary[face];
+        if (m_shapeDictionary.ContainsKey(shape))
+        {
+            slime.ShapeSpriteRenderer.sprite = m_shapeDictionary[shape].shapeSprite;
+            slime.FaceSpriteRenderer.gameObject.transform.localPosition = m_shapeDictionary[shape].facePos;
+        }
+        if(m_faceDictionary.ContainsKey(face)) slime.FaceSpriteRenderer.sprite = m_faceDictionary[face];
         Color colorSlime;
         ColorUtility.TryParseHtmlString(color, out colorSlime);
         slime.ShapeSpriteRenderer.color = colorSlime;
