@@ -25,6 +25,7 @@ public class Claw : MonoBehaviour {
 	public IEnumerator MoveToAndGrabSlime(Slime target)
 	{
 		SetHookAngle(m_HookOpenAngle);
+		target.State = "Claw";
 		Vector3 slimePos = target.transform.position - m_GrabPosition.localPosition;
 		//Move to target
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
@@ -32,8 +33,6 @@ public class Claw : MonoBehaviour {
 			transform.position = Vector3.Lerp(m_startPosition, slimePos, timer);
 			yield return null;
 		}
-		//Animation to grab slime here
-		target.State = "Claw";
 		target.Claw = this;
 		for (float timer = 0.0f; timer < 1.0f; timer += Time.deltaTime * m_moveSpeed)
 		{
