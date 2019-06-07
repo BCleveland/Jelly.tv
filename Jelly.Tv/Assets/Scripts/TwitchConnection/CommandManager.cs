@@ -25,6 +25,7 @@ public class CommandManager
 		Commands.Add(new TwitchCommand("info", Command_Info));
 		Commands.Add(new TwitchCommand("winfo", WhisperCommand_Info));
 		Commands.Add(new TwitchCommand("commands", Command_ListCommands));
+		Commands.Add(new TwitchCommand("mg", WhisperCommand_StartMinigame));
 	}
 
 	private void Command_Login(object sender, OnChatCommandReceivedArgs e)
@@ -45,7 +46,13 @@ public class CommandManager
 		//"Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!"
 		TwitchClient.Instance.Client.SendMessage(TwitchClient.Instance.Client.JoinedChannels[0], message);
 	}
-	private void WhisperCommand_Info(object sender, OnWhisperCommandReceivedArgs e)
+
+	private void WhisperCommand_StartMinigame(object sender, OnWhisperCommandReceivedArgs e)
+	{
+		MinigameManager.Instance.IsMinigameStarting = true;
+	}
+
+		private void WhisperCommand_Info(object sender, OnWhisperCommandReceivedArgs e)
 	{
 		string message = UserInputManager.GetParsedMessage(UserInputManager.CommandFeedback_Info);
 		//"Welcome to Merlin's channel! I'm currently building a very good bot boy with some friends!"

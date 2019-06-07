@@ -14,13 +14,14 @@ public class MinigameManager : Singleton<MinigameManager>
 	[SerializeField] GraphController m_GraphController = null;
 
 	public bool IsInMinigame { get { return m_CurrentMinigame != null; } }
-
+	public bool IsMinigameStarting = false;
 	private int m_LastMinigameId = -1;
 	private Minigame m_CurrentMinigame;
 	private void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.M))
+		if(IsMinigameStarting)//Input.GetKeyDown(KeyCode.M))
 		{
+			IsMinigameStarting = false;
 			List<PlayerManager.Player> players = new List<PlayerManager.Player>()
 			{
 				Lobby.Instance.GetNextPlayer(),

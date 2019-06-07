@@ -1088,6 +1088,7 @@ MonoBehaviour:
   - {fileID: 157593356}
   - {fileID: 261419886}
   m_GraphController: {fileID: 1904488202}
+  IsMinigameStarting: 0
 --- !u!4 &373114245
 Transform:
   m_ObjectHideFlags: 0
@@ -17841,7 +17842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1699, y: 997}
+  m_AnchoredPosition: {x: 0, y: 500}
   m_SizeDelta: {x: 215, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338925423
