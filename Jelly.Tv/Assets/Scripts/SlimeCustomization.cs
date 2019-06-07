@@ -97,10 +97,10 @@ public class SlimeCustomization : MonoBehaviour
         TwitchCommand colorCommand = new TwitchCommand("color", ChangeSlimeShapeColor);
         TwitchClient.CommandManager.Commands.Add(colorCommand);
 
-        TwitchCommand shapeInfoCommand = new TwitchCommand("infoshape", ChangeSlimeShapeColor);
+        TwitchCommand shapeInfoCommand = new TwitchCommand("infoshape", ShapeInfo);
         TwitchClient.CommandManager.Commands.Add(shapeInfoCommand);
 
-        TwitchCommand faceInfoCommand = new TwitchCommand("infoface", ChangeSlimeShapeColor);
+        TwitchCommand faceInfoCommand = new TwitchCommand("infoface", FaceInfo);
         TwitchClient.CommandManager.Commands.Add(faceInfoCommand);
     }
 
